@@ -1,11 +1,19 @@
 ---
+
 import Layout from "../../layouts/Layout.astro";
 import TeamCard from "../../components/TeamCard.astro";
 import { teams } from "../../data/teams";
 
-const sections = ["boys", "girls", "mixed", "men", "women", "pan-disability"];
-
 export function getStaticPaths() {
+  const sections = [
+    "boys",
+    "girls",
+    "mixed",
+    "men",
+    "women",
+    "pan-disability",
+  ];
+
   return sections.map((section) => ({
     params: { section },
   }));
@@ -13,19 +21,21 @@ export function getStaticPaths() {
 
 const { section } = Astro.params;
 
-const sectionName = section
-  .split("-")
-  .map((word) => word[0].toUpperCase() + word.slice(1))
-  .join("-");
+const displayNameMap = {
+  boys: "Boys",
+  girls: "Girls",
+  mixed: "Mixed",
+  men: "Men",
+  women: "Women",
+  "pan-disability": "Pan-Disability",
+};
 
-const displayName =
-  section === "pan-disability"
-    ? "Pan-Disability"
-    : sectionName;
+const displayName = displayNameMap[section] ?? "Teams";
 
-const filteredTeams = teams.filter(
-  (team) => team.section.toLowerCase().replace(" ", "-") === section
-);
+const filteredTeams = teams.filter((team) => {
+  const teamSection = team.section ?? "";
+  return teamSection.toLowerCase().replace(/\s+/g, "-") === section;
+});
 ---
 
 <Layout title={`${displayName} Teams | Wroughton & Wichelstowe FC`}>
