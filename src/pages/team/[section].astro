@@ -1,0 +1,53 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import TeamCard from "../../components/TeamCard.astro";
+import { teams } from "../../data/teams";
+
+const sections = ["boys", "girls", "mixed", "men", "women", "pan-disability"];
+
+export function getStaticPaths() {
+  return sections.map((section) => ({
+    params: { section },
+  }));
+}
+
+const { section } = Astro.params;
+
+const sectionName = section
+  .split("-")
+  .map((word) => word[0].toUpperCase() + word.slice(1))
+  .join("-");
+
+const displayName =
+  section === "pan-disability"
+    ? "Pan-Disability"
+    : sectionName;
+
+const filteredTeams = teams.filter(
+  (team) => team.section.toLowerCase().replace(" ", "-") === section
+);
+---
+
+<Layout title={`${displayName} Teams | Wroughton & Wichelstowe FC`}>
+  <main class="bg-[#04163a]">
+    <section class="mx-auto max-w-6xl px-6 py-20">
+      <a href="/teams" class="text-sm font-semibold text-blue-300 hover:text-blue-200">
+        ← Back to all sections
+      </a>
+
+      <h1 class="mt-8 text-5xl font-light tracking-tight text-white">
+        {displayName}
+      </h1>
+
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300">
+        Browse WWFC {displayName.toLowerCase()} teams and age groups.
+      </p>
+
+      <div class="mt-12 grid gap-6 md:grid-cols-2">
+        {filteredTeams.map((team) => (
+          <TeamCard team={team} />
+        ))}
+      </div>
+    </section>
+  </main>
+</Layout>

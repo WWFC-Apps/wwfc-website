@@ -1,0 +1,26 @@
+export const teams = [
+  {
+    name: "Under 7s Boys",
+    slug: "under-7s-boys",
+    section: "Boys",
+    ageGroup: "U7",
+    category: "Youth",
+    manager: "TBC",
+    training: "TBC",
+    venue: "TBC",
+    recruiting: true,
+    description: "Boys football for U7 players.",
+  },
+  {
+    name: "Wildcats",
+    slug: "wildcats",
+    section: "Girls",
+    ageGroup: "Girls Football",
+    category: "Girls",
+    manager: "TBC",
+    training: "TBC",
+    venue: "TBC",
+    recruiting: true,
+    description: "Girls sessional football.",
+  },
+];

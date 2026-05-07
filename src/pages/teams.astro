@@ -1,12 +1,69 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+const sections = [
+  {
+    title: "Boys",
+    href: "/teams/boys",
+    description: "Boys teams across junior and youth age groups.",
+  },
+  {
+    title: "Girls",
+    href: "/teams/girls",
+    description: "Girls football teams and development opportunities.",
+  },
+  {
+    title: "Mixed",
+    href: "/teams/mixed",
+    description: "Mixed football for younger age groups and development squads.",
+  },
+  {
+    title: "Men",
+    href: "/teams/men",
+    description: "Adult men’s football at WWFC.",
+  },
+  {
+    title: "Women",
+    href: "/teams/women",
+    description: "Adult women’s football at WWFC.",
+  },
+  {
+    title: "Pan-Disability",
+    href: "/teams/pan-disability",
+    description: "Inclusive football opportunities for players with disabilities.",
+  },
+];
 ---
 
-<Layout title="Teams | Wroughton & Wichelstowe FC">
-  <main class="mx-auto max-w-6xl px-6 py-20">
-    <h1 class="text-4xl font-bold">WWFC Teams</h1>
-    <p class="mt-6 max-w-3xl text-slate-300">
-      All of our individual teams to be added here
-    </p>
+<Layout title="Our Teams | Wroughton & Wichelstowe FC">
+  <main class="bg-[#04163a]">
+    <section class="mx-auto max-w-6xl px-6 py-20">
+      <p class="text-sm font-medium uppercase tracking-[0.3em] text-blue-300">
+        Our Teams
+      </p>
+
+      <h1 class="mt-4 max-w-3xl text-4xl font-light tracking-tight text-white sm:text-6xl">
+        Find the right football pathway at WWFC.
+      </h1>
+
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300">
+        Choose a football section below, then browse the relevant teams and age groups.
+      </p>
+
+      <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {sections.map((section) => (
+          <a
+            href={section.href}
+            class="group rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:bg-white/10"
+          >
+            <h2 class="text-2xl font-semibold text-white">{section.title}</h2>
+            <p class="mt-3 text-slate-300">{section.description}</p>
+            <p class="mt-6 font-semibold text-blue-300 group-hover:text-blue-200">
+              View {section.title} →
+            </p>
+          </a>
+        ))}
+      </div>
+    </section>
   </main>
 </Layout>
