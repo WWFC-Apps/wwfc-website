@@ -5,30 +5,34 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="Wroughton & Wichelstowe FC | Community Football Club">
   <main>
     <section class="relative overflow-hidden bg-slate-950">
-      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(59,130,246,0.35),_transparent_40%)]"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(59,130,246,0.22),_transparent_45%)]"></div>
 
-      <div class="relative mx-auto flex min-h-[80vh] max-w-6xl flex-col justify-center px-6 py-24">
+      <div class="relative mx-auto flex min-h-[88vh] max-w-6xl flex-col justify-center px-8 py-24">
         <p class="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-blue-300">
           Wroughton & Wichelstowe FC
         </p>
 
-        <h1 class="max-w-4xl text-4xl font-bold tracking-tight sm:text-6xl">
+        <h1 class="max-w-4xl text-4xl font-light leading-[1.02] tracking-tight sm:text-6xl">
           Football for our community, from first kick to lifelong player.
         </h1>
 
-        <p class="mt-6 max-w-2xl text-lg text-slate-300">
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300">
           A registered charity football club providing inclusive football opportunities across Wroughton,
           Wichelstowe and the surrounding area.
         </p>
 
         <div class="mt-10 flex flex-col gap-4 sm:flex-row">
-          <a href="/teams" class="rounded-full bg-blue-500 px-6 py-3 text-center font-semibold text-white hover:bg-blue-400">
+          <a href="/teams" class="rounded-full bg-blue-500 px-6 py-3 text-center font-semibold text-white shadow-lg shadow-blue-500/20 transition hover:scale-[1.02] hover:bg-blue-400">
+		
             Find a Team
           </a>
 
-          <a href="/visiting-teams" class="rounded-full border border-white/30 px-6 py-3 text-center font-semibold text-white hover:bg-white/10">
-            Visiting Teams Info
-          </a>
+           <a
+    href="/visiting-teams"
+    class="rounded-full border border-white/30 px-6 py-3 text-center font-semibold text-white transition hover:bg-white/10"
+  >
+    Visiting Teams Info
+  </a>
         </div>
       </div>
     </section>
