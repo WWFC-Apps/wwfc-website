@@ -12,32 +12,29 @@ const navItems = [
 ---
 
 <header class="sticky top-0 z-50 border-b border-white/10 bg-[#04163a]/95 backdrop-blur">
-  <div class="relative mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-    
-    <a href="/" class="flex items-center gap-4 font-bold">
-      <img
-        src="/images/wwfc-logo.png"
-        alt="Wroughton & Wichelstowe FC logo"
-        class="h-16 w-auto rounded-xl bg-white p-1.5 shadow-lg shadow-black/20"
-      />
+  <div class="relative mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-4">
+    <a href="/" class="flex min-w-0 items-center gap-3 font-bold">
+      <span class="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-white p-1.5 shadow-lg shadow-black/20">
+        <img
+          src="/images/wwfc-logo1.png"
+          alt="Wroughton & Wichelstowe FC logo"
+          class="h-full w-full object-contain"
+        />
+      </span>
 
-      <div class="hidden sm:block">
-        <p class="text-lg font-semibold leading-tight text-white">
+      <span class="hidden min-w-0 sm:block">
+        <span class="block text-base font-semibold leading-tight text-white">
           Wroughton & Wichelstowe FC
-        </p>
-
-        <p class="text-sm font-medium text-blue-300">
+        </span>
+        <span class="block text-xs font-medium text-blue-300">
           Community Football Club
-        </p>
-      </div>
+        </span>
+      </span>
     </a>
 
     <nav class="hidden items-center gap-6 text-sm font-medium text-slate-300 md:flex">
       {navItems.map((item) => (
-        <a
-          href={item.href}
-          class="transition hover:text-white"
-        >
+        <a href={item.href} class="transition hover:text-white">
           {item.label}
         </a>
       ))}
@@ -45,7 +42,7 @@ const navItems = [
 
     <a
       href="/contact"
-      class="hidden rounded-full bg-blue-500 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-500/20 transition hover:scale-[1.02] hover:bg-blue-400 md:inline-flex"
+      class="hidden shrink-0 rounded-full bg-blue-500 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-500/20 transition hover:scale-[1.02] hover:bg-blue-400 md:inline-flex"
     >
       Join a Team
     </a>
