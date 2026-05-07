@@ -5,15 +5,14 @@ import TeamCard from "../../components/TeamCard.astro";
 import { teams } from "../../data/teams";
 
 export function getStaticPaths() {
-  const sections = [
-    "boys",
-    "girls",
-    "mixed",
-    "men",
-    "women",
-    "pan-disability",
-  ];
-
+ const sections = [
+  "adult-senior-football",
+  "youth-football-mixed",
+  "girls-football",
+  "pan-disability-football",
+  "sessional-football",
+  "tournament-football",
+];
   return sections.map((section) => ({
     params: { section },
   }));
@@ -22,12 +21,12 @@ export function getStaticPaths() {
 const { section } = Astro.params;
 
 const displayNameMap = {
-  boys: "Boys",
-  girls: "Girls",
-  mixed: "Mixed",
-  men: "Men",
-  women: "Women",
-  "pan-disability": "Pan-Disability",
+  "adult-senior-football": "Adult / Senior Football",
+  "youth-football-mixed": "Youth Football (Mixed)",
+  "girls-football": "Girls Football",
+  "pan-disability-football": "Pan-Disability Football",
+  "sessional-football": "Sessional Football",
+  "tournament-football": "Tournament Football",
 };
 
 const displayName = displayNameMap[section] ?? "Teams";
