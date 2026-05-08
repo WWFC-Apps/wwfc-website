@@ -1,15 +1,113 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import PageShell from "../components/PageShell.astro";
+
+const venues = [
+  {
+    name: "The Weir Field",
+    image: "/images/venues/weir-field.webp",
+    description:
+      "Matchday information for teams visiting The Weir Field, including parking, pitch access and facilities.",
+  },
+  {
+    name: "The Ridgeway Leisure Centre",
+    image: "/images/venues/ridgeway.webp",
+    description:
+      "Venue details for fixtures played at The Ridgeway Leisure Centre, including arrival guidance and facilities.",
+  },
+  {
+    name: "Wroughton Junior School",
+    image: "/images/venues/junior-school.webp",
+    description:
+      "Information for visiting teams playing at Wroughton Junior School, including access, parking and site guidance.",
+  },
+  {
+    name: "The Deanery School",
+    image: "/images/venues/deanery.webp",
+    description:
+      "Matchday guidance for fixtures hosted at The Deanery School, including pitch location and visitor information.",
+  },
+  {
+    name: "Maunsell Way",
+    image: "/images/venues/maunsell.webp",
+    description:
+      "Visitor information for Maunsell Way, including local access, parking and pitch details.",
+  },
+  {
+    name: "North Wroughton",
+    image: "/images/venues/nw.webp",
+    description:
+      "Information for visiting teams attending fixtures at North Wroughton.",
+  },
+];
 ---
 
-<Layout title="Information for Visiting Teams | Wroughton & Wichelstowe FC">
+<Layout
+  title="Information for Visiting Teams | Wroughton & Wichelstowe FC"
+  description="Venue and matchday information for teams visiting Wroughton & Wichelstowe FC."
+>
   <PageShell>
-    <main class="mx-auto max-w-6xl px-6 py-20">
-      <h1 class="text-4xl font-bold">Visiting Teams</h1>
-      <p class="mt-6 max-w-3xl text-slate-300">
-        Information for visiting teams will be added here
-      </p>
-    </main>
+    <section class="py-24">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="max-w-3xl">
+          <p class="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-blue-300">
+            Visiting Teams
+          </p>
+
+          <h1 class="text-5xl font-light tracking-tight sm:text-6xl">
+            Information for visiting teams
+          </h1>
+
+          <p class="mt-6 text-lg leading-relaxed text-slate-300">
+            Wroughton Youth Football Club play across a number of pitches in the Parish of Wroughton and Wichelstowe.
+          </p>
+        </div>
+
+        <div class="mt-16 grid gap-8 md:grid-cols-2">
+          {venues.map((venue) => (
+            <article class="overflow-hidden rounded-3xl border border-white/10 bg-white/5 transition hover:border-blue-400/40 hover:bg-white/10">
+              <div class="aspect-[16/9] bg-white/10">
+                <img
+                  src={venue.image}
+                  alt={`${venue.name} venue`}
+                  class="h-full w-full object-cover"
+                />
+              </div>
+
+              <div class="p-8">
+                <h2 class="text-2xl font-semibold text-white">
+                  {venue.name}
+                </h2>
+
+                <p class="mt-4 leading-relaxed text-slate-300">
+                  {venue.description}
+                </p>
+
+                <div class="mt-6 grid gap-3 text-sm text-slate-300">
+                  <p>
+                    <span class="font-semibold text-white">Parking:</span> Details to be confirmed.
+                  </p>
+                  <p>
+                    <span class="font-semibold text-white">Toilets:</span> Details to be confirmed.
+                  </p>
+                  <p>
+                    <span class="font-semibold text-white">Dogs:</span> Details to be confirmed.
+                  </p>
+                </div>
+
+                <div class="mt-8">
+                  <a
+                    href="#"
+                    class="inline-flex rounded-full border border-white/20 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+                  >
+                    View map
+                  </a>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
   </PageShell>
 </Layout>
