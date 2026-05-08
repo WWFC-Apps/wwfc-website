@@ -2,22 +2,6 @@
 import Layout from "../../layouts/Layout.astro";
 import PageShell from "../../components/PageShell.astro";
 import ConstitutionModal from "../../components/ConstitutionModal.jsx";
-
-const charityLinks = [
-  {
-    title: "Club Constitution Document",
-    href: "#",
-    description:
-      "View the governing constitution and operational framework for WWFC.",
-  },
-
-  {
-    title: "Meet the Trustees",
-    href: "/policies/committee",
-    description:
-      "Meet the trustees and committee members supporting WWFC governance.",
-  },
-];
 ---
 
 <Layout
@@ -27,7 +11,6 @@ const charityLinks = [
   <PageShell>
     <section class="py-24">
       <div class="mx-auto max-w-5xl px-6">
-
         <a
           href="/about"
           class="text-sm font-semibold text-blue-300 hover:text-blue-200"
@@ -50,30 +33,26 @@ const charityLinks = [
           </p>
         </div>
 
-       <div class="mt-16 grid gap-6 md:grid-cols-2">
+        <div class="mt-16 grid gap-6 md:grid-cols-2">
+          <ConstitutionModal client:load />
 
-  <ConstitutionModal client:load />
+          <a
+            href="/policies/committee"
+            class="block rounded-3xl border border-white/10 bg-white/5 p-8 transition hover:border-blue-400/40 hover:bg-white/10"
+          >
+            <h2 class="text-2xl font-semibold text-white">
+              Meet the Trustees
+            </h2>
 
-  <a
-    href="/policies/committee"
-    class="block rounded-3xl border border-white/10 bg-white/5 p-8 transition hover:border-blue-400/40 hover:bg-white/10"
-  >
-    <h2 class="text-2xl font-semibold text-white">
-      Meet the Trustees
-    </h2>
+            <p class="mt-4 leading-relaxed text-slate-300">
+              Meet the trustees and committee members supporting WWFC governance.
+            </p>
 
-    <p class="mt-4 leading-relaxed text-slate-300">
-      Meet the trustees and committee members supporting WWFC governance.
-    </p>
-
-    <div class="mt-8 text-sm font-semibold text-blue-300">
-      View information →
-    </div>
-  </a>
-
-</div>
-         
-
+            <div class="mt-8 text-sm font-semibold text-blue-300">
+              View information →
+            </div>
+          </a>
+        </div>
       </div>
     </section>
   </PageShell>
