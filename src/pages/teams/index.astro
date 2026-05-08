@@ -1,13 +1,15 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import { sections } from "../../data/teams";
+import PageShell from "../../components/PageShell.astro";
 ---
 
 <Layout
   title="Teams | Wroughton & Wichelstowe FC"
   description="Explore football teams and pathways at Wroughton & Wichelstowe FC."
 >
-  <section class="bg-[#04163a] py-24 text-white">
+<PageShell>
+ <section class="py-24">
     <div class="mx-auto max-w-6xl px-6">
       
       <div class="max-w-3xl">
@@ -55,4 +57,5 @@ import { sections } from "../../data/teams";
 
     </div>
   </section>
+   </PageShell>
 </Layout>
