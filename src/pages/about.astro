@@ -1,12 +1,78 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+const aboutCards = [
+  {
+    title: "History of the Club",
+    description:
+      "Learn more about the club’s journey, heritage and transition to Wroughton & Wichelstowe FC.",
+  },
+  {
+    title: "Meet the Trustees",
+    description:
+      "Information about the charity trustees responsible for governance and oversight.",
+  },
+  {
+    title: "Club Vision",
+    description:
+      "Our vision for inclusive, community-focused football across Wroughton, Wichelstowe and beyond.",
+  },
+  {
+    title: "Contact Details",
+    description:
+      "Key contact information for club enquiries, safeguarding, football pathways and administration.",
+  },
+  {
+    title: "Partners",
+    description:
+      "Organisations and community partners supporting the club’s development and activities.",
+  },
+  {
+    title: "Sponsors",
+    description:
+      "Local businesses and sponsors helping WWFC deliver football opportunities for the community.",
+  },
+];
 ---
 
-<Layout title="About | Wroughton & Wichelstowe FC">
-  <main class="mx-auto max-w-6xl px-6 py-20">
-    <h1 class="text-4xl font-bold">About WWFC</h1>
-    <p class="mt-6 max-w-3xl text-slate-300">
-      Information about the club, charity status, vision, trustees, accreditation and affiliations will be added here.
-    </p>
-  </main>
+<Layout
+  title="About | Wroughton & Wichelstowe FC"
+  description="About Wroughton & Wichelstowe FC, including club history, trustees, vision, partners and sponsors."
+>
+  <section class="bg-[#04163a] py-24 text-white">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="max-w-3xl">
+        <p class="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-blue-300">
+          About WWFC
+        </p>
+
+        <h1 class="text-5xl font-light tracking-tight sm:text-6xl">
+          A community football club with charity at its heart.
+        </h1>
+
+        <p class="mt-6 text-lg leading-relaxed text-slate-300">
+          Wroughton & Wichelstowe FC is a registered charity football club
+          providing inclusive football opportunities across our local community.
+        </p>
+      </div>
+
+      <div class="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        {aboutCards.map((card) => (
+          <article class="rounded-3xl border border-white/10 bg-white/5 p-8 transition hover:border-blue-400/40 hover:bg-white/10">
+            <h2 class="text-2xl font-semibold text-white">
+              {card.title}
+            </h2>
+
+            <p class="mt-4 leading-relaxed text-slate-300">
+              {card.description}
+            </p>
+
+            <div class="mt-8 text-sm font-semibold text-blue-300">
+              Coming soon
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
 </Layout>
