@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import PageShell from "../components/PageShell.astro";
 
 const aboutCards = [
   {
@@ -39,6 +40,7 @@ const aboutCards = [
   title="About | Wroughton & Wichelstowe FC"
   description="About Wroughton & Wichelstowe FC, including club history, trustees, vision, partners and sponsors."
 >
+ <PageShell>
   <section class="bg-[#04163a] py-24 text-white">
     <div class="mx-auto max-w-6xl px-6">
       <div class="max-w-3xl">
@@ -90,4 +92,5 @@ const aboutCards = [
       </div>
     </div>
   </section>
+    </PageShell>
 </Layout>

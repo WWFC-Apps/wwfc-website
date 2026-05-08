@@ -1,0 +1,11 @@
+---
+const { class: className = "" } = Astro.props;
+---
+
+<main class={`relative overflow-hidden bg-[#04163a] text-white ${className}`}>
+  <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(37,99,235,0.35),_transparent_50%)]"></div>
+
+  <div class="relative">
+    <slot />
+  </div>
+</main>
