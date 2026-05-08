@@ -1,80 +1,209 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+
+const sections = [
+  {
+    title: "1. Policy Statement",
+    items: [
+      "Wroughton & Wichelstowe Football Club (WWFC) is fully committed to safeguarding the welfare of all children and young people.",
+      "We recognise our legal and moral responsibility under UK legislation including the Children Acts 1989 & 2004.",
+      "We adhere to The FA safeguarding policies and Wiltshire FA guidance.",
+      "The welfare of the child is always the paramount consideration.",
+      "We aim to create a safe, fun, and inclusive football environment for all participants.",
+    ],
+  },
+  {
+    title: "2. Scope",
+    items: [
+      "This policy applies to all children under 18 involved in club activities.",
+      "It covers league teams, adult teams involving minors, sessional football, and pan-disability football.",
+      "It applies to all staff, volunteers, coaches, parents, and players.",
+      "It applies at training, matches, tournaments, events, trips, and online environments.",
+    ],
+  },
+  {
+    title: "3. Key Principles",
+    items: [
+      "Children’s welfare is the first priority.",
+      "All children have a right to protection from abuse regardless of background.",
+      "Safeguarding is everyone’s responsibility.",
+      "We promote inclusion and equal opportunity.",
+      "Concerns will always be taken seriously and acted upon.",
+    ],
+  },
+  {
+    title: "4. Safeguarding Structure",
+    items: [
+      "WWFC Club Welfare Officers: Dave Hunt & Sophie Lambert.",
+      "CWO email: wyfcwelfare@gmail.com.",
+      "The CWO is responsible for managing concerns and liaising with Wiltshire FA.",
+      "All concerns must be reported through the CWO unless inappropriate to do so.",
+      "Records of concerns are stored securely and confidentially.",
+    ],
+  },
+  {
+    title: "5. Safer Recruitment",
+    items: [
+      "All relevant roles require DBS checks.",
+      "Coaches must complete the England FA Safeguarding Children training course and hold a valid certificate.",
+      "References and identity checks are carried out.",
+      "Volunteers understand their safeguarding responsibilities before starting.",
+    ],
+  },
+  {
+    title: "6. Codes of Conduct",
+    items: [
+      "All members must respect others and promote fair play.",
+      "No abusive, bullying, or discriminatory behaviour will be tolerated.",
+      "Adults must maintain appropriate boundaries with children.",
+      "Breaches may lead to suspension or removal.",
+    ],
+  },
+  {
+    title: "7. Good Practice",
+    items: [
+      "Always work in open environments.",
+      "Avoid being alone with a child where possible.",
+      "Use appropriate communication channels and avoid private messaging.",
+      "Ensure correct supervision ratios.",
+      "Gain parental consent for activities and media.",
+    ],
+  },
+  {
+    title: "8. Recognising Abuse",
+    items: [
+      "Physical abuse: harm or injury.",
+      "Emotional abuse: persistent emotional harm.",
+      "Sexual abuse: inappropriate sexual behaviour.",
+      "Neglect: failure to meet basic needs.",
+      "Other risks include bullying, grooming, and online abuse.",
+    ],
+  },
+  {
+    title: "9. Reporting Concerns",
+    items: [
+      "Ensure immediate safety of the child.",
+      "Report to the Club Welfare Officer immediately.",
+      "Record facts clearly and avoid assumptions.",
+      "Do not investigate concerns yourself.",
+      "In an emergency call 999. NSPCC: 0808 800 5000.",
+    ],
+  },
+  {
+    title: "10. Managing Allegations",
+    items: [
+      "All allegations are taken seriously.",
+      "Allegations are reported to the Wiltshire FA safeguarding officer.",
+      "Matters are handled confidentially and fairly.",
+      "Appropriate disciplinary action will be taken if required.",
+    ],
+  },
+  {
+    title: "11. Online Safety",
+    items: [
+      "Use official communication channels only.",
+      "No direct one-to-one messaging with children.",
+      "Social media must be appropriate and monitored.",
+      "Consent is required for photos and videos.",
+    ],
+  },
+  {
+    title: "12. Inclusion & Disability",
+    items: [
+      "We provide inclusive opportunities for all abilities.",
+      "Pan-disability football is supported.",
+      "Reasonable adjustments are made where needed.",
+      "Additional safeguarding awareness is applied for vulnerable players.",
+    ],
+  },
+  {
+    title: "13. Health & Safety",
+    items: [
+      "Risk assessments are conducted.",
+      "Qualified first aiders are present.",
+      "Safe facilities and equipment are maintained.",
+      "Supervision ratios are adhered to.",
+    ],
+  },
+  {
+    title: "14. Policy Review",
+    items: [
+      "The policy is reviewed annually.",
+      "It is updated following FA or legal changes.",
+      "It is reviewed after any safeguarding incident.",
+    ],
+  },
+];
 ---
 
 <Layout
   title="Safeguarding Children Policy | Wroughton & Wichelstowe FC"
-  description="Safeguarding policy for Wroughton & Wichelstowe FC."
+  description="Child safeguarding policy for Wroughton & Wichelstowe FC."
 >
   <section class="bg-[#04163a] py-24 text-white">
     <div class="mx-auto max-w-4xl px-6">
-      <a
-        href="/policies"
-        class="text-sm font-semibold text-blue-300 hover:text-blue-200"
-      >
+      <a href="/policies" class="text-sm font-semibold text-blue-300 hover:text-blue-200">
         ← Back to policies
       </a>
 
-      <div class="mt-10 rounded-3xl border border-white/10 bg-white/5 p-10">
-        <h1 class="text-5xl font-light tracking-tight">
-          Safeguarding Children Policy
-        </h1>
-
-        <p class="mt-8 text-lg leading-relaxed text-slate-300">
-          Wroughton & Wichelstowe FC is committed to safeguarding and
-          promoting the welfare of children and young people. The club
-          expects all coaches, volunteers, parents, players and visitors
-          to share this commitment.
+      <div class="mt-10 rounded-3xl border border-white/10 bg-white/5 p-8 sm:p-10">
+        <p class="text-sm font-semibold uppercase tracking-[0.3em] text-blue-300">
+          Wroughton & Wichelstowe FC
         </p>
 
-        <div class="mt-10 space-y-8 text-slate-300">
-          <div>
-            <h2 class="text-2xl font-semibold text-white">
-              Our Commitment
-            </h2>
+        <h1 class="mt-4 text-4xl font-light tracking-tight sm:text-5xl">
+          Child Safeguarding Policy
+        </h1>
 
-            <p class="mt-3 leading-relaxed">
-              We aim to provide a safe, inclusive and positive environment
-              where children can enjoy football, develop confidence and
-              participate free from abuse, bullying, discrimination or harm.
-            </p>
-          </div>
-
-          <div>
-            <h2 class="text-2xl font-semibold text-white">
-              Safeguarding Principles
-            </h2>
-
-            <ul class="mt-4 list-disc space-y-3 pl-6">
-              <li>The welfare of the child is paramount.</li>
-              <li>All children have the right to protection from harm.</li>
-              <li>All safeguarding concerns will be taken seriously.</li>
-              <li>All volunteers and coaches are expected to follow FA safeguarding guidance.</li>
-              <li>The club will promote inclusion and respect at all times.</li>
-            </ul>
-          </div>
-
-          <div>
-            <h2 class="text-2xl font-semibold text-white">
-              Reporting Concerns
-            </h2>
-
-            <p class="mt-3 leading-relaxed">
-              Any safeguarding concern should be reported immediately to the
-              club Welfare Officer or an appropriate safeguarding authority.
-            </p>
-          </div>
-
-          <div>
-            <h2 class="text-2xl font-semibold text-white">
-              Contact
-            </h2>
-
-            <p class="mt-3 leading-relaxed">
-              Club Welfare Officer details will be published here.
-            </p>
-          </div>
+        <div class="mt-6 space-y-2 text-slate-300">
+          <p>Affiliated to Wiltshire FA</p>
+          <p>England FA: 2-Star Accredited Club</p>
+          <p>Policy Version 1.0 — 2026</p>
         </div>
+
+        <div class="mt-12 space-y-10">
+          {sections.map((section) => (
+            <section>
+              <h2 class="text-2xl font-semibold text-white">
+                {section.title}
+              </h2>
+
+              <ul class="mt-4 list-disc space-y-3 pl-6 text-slate-300">
+                {section.items.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </section>
+          ))}
+        </div>
+
+        <section class="mt-14 rounded-2xl border border-blue-400/20 bg-blue-500/10 p-6">
+          <h2 class="text-2xl font-semibold text-white">
+            Appendix A: Safeguarding Reporting Form
+          </h2>
+
+          <p class="mt-3 text-slate-300">
+            Safeguarding reports should be emailed to:
+            <a href="mailto:wyfcwelfare@gmail.com" class="font-semibold text-blue-300 hover:text-blue-200">
+              {" "}wyfcwelfare@gmail.com
+            </a>
+          </p>
+
+          <div class="mt-6 grid gap-3 text-sm text-slate-300 sm:grid-cols-2">
+            <p>Date of Report</p>
+            <p>Name of Person Reporting</p>
+            <p>Role at Club</p>
+            <p>Contact Details</p>
+            <p>Child’s Name</p>
+            <p>Child’s Age/DOB</p>
+            <p>Parent/Carer Details</p>
+            <p>Details of Concern</p>
+            <p>Immediate Action Taken</p>
+            <p>Reported to Anyone Else?</p>
+            <p>Date of Submission</p>
+            <p>Signature</p>
+          </div>
+        </section>
       </div>
     </div>
   </section>
