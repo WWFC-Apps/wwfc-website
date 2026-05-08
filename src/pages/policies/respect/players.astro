@@ -1,0 +1,87 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+const commitments = [
+  "Always play my best for the benefit of the team.",
+  "Play fairly and be friendly.",
+  "Play by the rules and respect the referee.",
+  "Shake hands with the other team — win or lose.",
+  "Listen carefully to what my coach tells me.",
+  "Understand that a coach has to do what’s best for the team.",
+  "Talk to someone I trust or the club welfare officer if I’m unhappy about anything at my club.",
+  "Encourage my team mates.",
+  "Respect the facilities home and away.",
+];
+
+const consequences = [
+  "Be asked to apologise to whoever I’ve upset.",
+  "Receive a formal warning.",
+  "Be dropped, substituted or suspended from training.",
+];
+---
+
+<Layout
+  title="Respect Code for Young Players | Wroughton & Wichelstowe FC"
+  description="WWFC Respect Code of Conduct for young players."
+>
+  <section class="bg-[#04163a] py-24 text-white">
+    <div class="mx-auto max-w-5xl px-6">
+      <a href="/policies/respect" class="text-sm font-semibold text-blue-300 hover:text-blue-200">
+        ← Back to Respect Code of Conduct
+      </a>
+
+      <div class="mt-10 rounded-3xl border border-white/10 bg-white/5 p-8 sm:p-10">
+        <div class="grid gap-10 md:grid-cols-[220px_1fr] md:items-center">
+          <div class="flex justify-center md:justify-start">
+            <img
+              src="/images/fa-respect.png"
+              alt="The FA Respect logo"
+              class="max-h-44 w-auto rounded-2xl bg-white/90 p-4 shadow-lg shadow-black/20"
+            />
+          </div>
+
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.3em] text-blue-300">
+              FA Respect
+            </p>
+
+            <h1 class="mt-4 text-4xl font-light tracking-tight sm:text-5xl">
+              Young Players
+            </h1>
+
+            <p class="mt-6 text-lg leading-relaxed text-slate-300">
+              Play your best. Be your best. Make sure you and everyone around you
+              has a good time on and off the pitch.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-12 grid gap-8 md:grid-cols-2">
+          <section class="rounded-2xl border border-white/10 bg-white/5 p-6">
+            <h2 class="text-2xl font-semibold text-white">
+              When playing football, I will
+            </h2>
+
+            <ul class="mt-5 list-disc space-y-3 pl-6 text-slate-300">
+              {commitments.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </section>
+
+          <section class="rounded-2xl border border-blue-400/20 bg-blue-500/10 p-6">
+            <h2 class="text-2xl font-semibold text-white">
+              If I do not follow the code
+            </h2>
+
+            <ul class="mt-5 list-disc space-y-3 pl-6 text-slate-300">
+              {consequences.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
