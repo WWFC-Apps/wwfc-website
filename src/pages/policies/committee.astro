@@ -1,0 +1,83 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const committeeMembers = [
+  { role: "Chair", name: "TBC" },
+  { role: "Vice-Chair", name: "TBC" },
+  { role: "Club Secretary", name: "TBC" },
+
+  { role: "Club Welfare Officer", name: "Dave Hunt" },
+  { role: "Club Welfare Officer", name: "Sophie Lambert" },
+
+  { role: "Club Digital Officer", name: "TBC" },
+  { role: "Respect Officer", name: "TBC" },
+  { role: "Social Secretary", name: "TBC" },
+  { role: "Charity Liaison Officer", name: "TBC" },
+
+  { role: "Head of Girls Football", name: "TBC" },
+  { role: "Head of Pan-Disability Football", name: "TBC" },
+  { role: "Head of Fundraising", name: "TBC" },
+];
+---
+
+<Layout
+  title="Meet the Committee | Wroughton & Wichelstowe FC"
+  description="Meet the volunteers and committee members supporting WWFC."
+>
+  <section class="bg-[#04163a] py-24 text-white">
+    <div class="mx-auto max-w-6xl px-6">
+
+      <a
+        href="/policies"
+        class="text-sm font-semibold text-blue-300 hover:text-blue-200"
+      >
+        ← Back to policies
+      </a>
+
+      <div class="mt-10 max-w-3xl">
+        <p class="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-blue-300">
+          CLUB GOVERNANCE
+        </p>
+
+        <h1 class="text-5xl font-light tracking-tight sm:text-6xl">
+          Meet the Committee
+        </h1>
+
+        <p class="mt-6 text-lg leading-relaxed text-slate-300">
+          WWFC is supported by a dedicated team of volunteers responsible for
+          governance, safeguarding, inclusion, digital operations and community engagement.
+        </p>
+      </div>
+
+      <div class="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        {committeeMembers.map((member) => (
+          <div
+            class="rounded-3xl border border-white/10 bg-white/5 p-8 transition hover:border-blue-400/40 hover:bg-white/10"
+          >
+            <div class="flex items-center gap-4">
+
+              <div class="flex h-14 w-14 items-center justify-center rounded-full bg-blue-500/20 text-lg font-semibold text-blue-200">
+                {member.name
+                  .split(" ")
+                  .map((part) => part[0])
+                  .join("")}
+              </div>
+
+              <div>
+                <h2 class="text-xl font-semibold text-white">
+                  {member.role}
+                </h2>
+
+                <p class="mt-1 text-slate-300">
+                  {member.name}
+                </p>
+              </div>
+
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+</Layout>
