@@ -1,0 +1,108 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+const generalCommitments = [
+  "Always show respect to everyone involved in the game.",
+  "Stick to the rules and celebrate the spirit of the game.",
+  "Encourage fair play and high standards of behaviour.",
+  "Always respect the referee and encourage players to do the same.",
+  "Never enter the field of play without the referee’s permission.",
+  "Never engage in, or tolerate, offensive, insulting or abusive behaviour.",
+  "Be aware of the potential impact of bad language on others.",
+  "Be gracious in victory and defeat.",
+  "Respect the facilities home and away.",
+];
+
+const playerCommitments = [
+  "Place the wellbeing, safety and enjoyment of each player above everything.",
+  "Never tolerate any form of bullying.",
+  "Ensure all activities are suited to the players’ ability and age.",
+  "Work with others, including officials, doctors, welfare officers and physiotherapists, for each player’s best interests.",
+  "Make myself familiar with safeguarding practices and relevant England Football guidance.",
+];
+
+const consequences = [
+  "Be required to meet with the club committee, league or County FA Welfare Officer.",
+  "Be suspended by the club from attending matches.",
+  "Be suspended or fined by the County FA.",
+  "Be required to leave, lose my position and/or have my licence withdrawn.",
+];
+---
+
+<Layout
+  title="Respect Code for Coaches | Wroughton & Wichelstowe FC"
+  description="WWFC Respect Code of Conduct for coaches, team managers and club officials."
+>
+  <section class="bg-[#04163a] py-24 text-white">
+    <div class="mx-auto max-w-5xl px-6">
+      <a href="/policies/respect" class="text-sm font-semibold text-blue-300 hover:text-blue-200">
+        ← Back to Respect Code of Conduct
+      </a>
+
+      <div class="mt-10 rounded-3xl border border-white/10 bg-white/5 p-8 sm:p-10">
+        <div class="grid gap-10 md:grid-cols-[220px_1fr] md:items-center">
+          <div class="flex justify-center md:justify-start">
+            <img
+              src="/images/fa-respect.png"
+              alt="The FA Respect logo"
+              class="max-h-44 w-auto rounded-2xl bg-white/90 p-4 shadow-lg shadow-black/20"
+            />
+          </div>
+
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.3em] text-blue-300">
+              FA Respect
+            </p>
+
+            <h1 class="mt-4 text-4xl font-light tracking-tight sm:text-5xl">
+              Coaches, Team Managers & Club Officials
+            </h1>
+
+            <p class="mt-6 text-lg leading-relaxed text-slate-300">
+              Use your position to set a positive example for the people you are responsible for
+              and help lead a better game for everyone.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-12 grid gap-8 lg:grid-cols-3">
+          <section class="rounded-2xl border border-white/10 bg-white/5 p-6">
+            <h2 class="text-2xl font-semibold text-white">
+              On and off the field, I will
+            </h2>
+
+            <ul class="mt-5 list-disc space-y-3 pl-6 text-slate-300">
+              {generalCommitments.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </section>
+
+          <section class="rounded-2xl border border-white/10 bg-white/5 p-6">
+            <h2 class="text-2xl font-semibold text-white">
+              When working with players, I will
+            </h2>
+
+            <ul class="mt-5 list-disc space-y-3 pl-6 text-slate-300">
+              {playerCommitments.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </section>
+
+          <section class="rounded-2xl border border-blue-400/20 bg-blue-500/10 p-6">
+            <h2 class="text-2xl font-semibold text-white">
+              If I do not follow the code
+            </h2>
+
+            <ul class="mt-5 list-disc space-y-3 pl-6 text-slate-300">
+              {consequences.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
