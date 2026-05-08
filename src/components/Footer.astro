@@ -1,29 +1,80 @@
-<footer class="border-t border-white/10 bg-[#04163a]">
-  <div class="mx-auto grid max-w-6xl gap-8 px-6 py-10 md:grid-cols-3">
-    <div>
-      <h2 class="font-bold">Wroughton & Wichelstowe FC</h2>
-      <p class="mt-3 text-sm text-slate-400">
-        A registered charity football club supporting inclusive football across our local community.
-      </p>
+<footer class="border-t border-white/10 bg-[#04163a] text-white">
+  <div class="mx-auto max-w-6xl px-6 py-12">
+    <div class="grid gap-10 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
+      <div>
+        <div class="flex items-center gap-3">
+          <span class="flex h-14 w-14 items-center justify-center rounded-xl bg-white p-1.5 shadow-lg shadow-black/20">
+            <img
+              src="/images/wwfc-logo.png"
+              alt="Wroughton & Wichelstowe FC logo"
+              class="h-full w-full object-contain"
+            />
+          </span>
+
+          <div>
+            <h2 class="text-lg font-semibold">Wroughton & Wichelstowe FC</h2>
+            <p class="text-sm text-blue-300">Community Football Club</p>
+          </div>
+        </div>
+
+        <p class="mt-5 max-w-sm text-sm leading-relaxed text-slate-300">
+          A registered charity football club providing inclusive football
+          opportunities across Wroughton, Wichelstowe and the surrounding area.
+        </p>
+
+        <p class="mt-4 text-sm text-slate-400">
+          Charity Number: 1217495
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-sm font-semibold uppercase tracking-[0.2em] text-blue-300">
+          Club
+        </h3>
+
+        <ul class="mt-4 space-y-3 text-sm text-slate-300">
+          <li><a href="/about" class="hover:text-white">About</a></li>
+          <li><a href="/teams" class="hover:text-white">Teams</a></li>
+          <li><a href="/visiting-teams" class="hover:text-white">Visiting Teams</a></li>
+          <li><a href="/contact" class="hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-sm font-semibold uppercase tracking-[0.2em] text-blue-300">
+          Governance
+        </h3>
+
+        <ul class="mt-4 space-y-3 text-sm text-slate-300">
+          <li><a href="/policies/committee" class="hover:text-white">Meet the Committee</a></li>
+          <li><a href="/policies/safeguarding-children" class="hover:text-white">Safeguarding</a></li>
+          <li><a href="/policies/privacy-policy" class="hover:text-white">Privacy Policy</a></li>
+          <li><a href="/policies/respect" class="hover:text-white">Respect Code</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-sm font-semibold uppercase tracking-[0.2em] text-blue-300">
+          Get Involved
+        </h3>
+
+        <ul class="mt-4 space-y-3 text-sm text-slate-300">
+          <li><a href="/contact" class="hover:text-white">Join a Team</a></li>
+          <li><a href="/teams/girls-football" class="hover:text-white">Girls Football</a></li>
+          <li><a href="/teams/pan-disability-football" class="hover:text-white">Pan-Disability Football</a></li>
+          <li><a href="/teams/sessional-football" class="hover:text-white">Sessional Football</a></li>
+        </ul>
+      </div>
     </div>
 
-    <div>
-      <h3 class="font-semibold">Club</h3>
-      <ul class="mt-3 space-y-2 text-sm text-slate-400">
-        <li><a href="/about" class="hover:text-white">About</a></li>
-        <li><a href="/teams" class="hover:text-white">Our Teams</a></li>
-        <li><a href="/policies" class="hover:text-white">Policies</a></li>
-      </ul>
-    </div>
-
-    <div>
-      <h3 class="font-semibold">Contact</h3>
-      <p class="mt-3 text-sm text-slate-400">
-        Charity Number: 1217495
+    <div class="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 text-sm text-slate-400 md:flex-row md:items-center md:justify-between">
+      <p>
+        © {new Date().getFullYear()} Wroughton & Wichelstowe FC. All rights reserved.
       </p>
-      <a href="/contact" class="mt-3 inline-block text-sm font-semibold text-blue-300 hover:text-blue-200">
-        Contact the club →
-      </a>
+
+      <p>
+        Built for the WWFC community.
+      </p>
     </div>
   </div>
 </footer>
