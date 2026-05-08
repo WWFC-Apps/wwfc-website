@@ -38,22 +38,26 @@ const policies = [
         </p>
       </div>
 
-      <div class="mt-16 grid gap-6 md:grid-cols-2">
-        {policies.map((policy) => (
-          <a
-            href={policy.href}
-            class="group rounded-3xl border border-white/10 bg-white/5 p-8 transition hover:border-blue-400/40 hover:bg-white/10"
-          >
-            <h2 class="text-2xl font-semibold text-white group-hover:text-blue-300">
-              {policy.title}
-            </h2>
+     <div class="mt-16 grid gap-6 md:grid-cols-2">
+  {policies.map((policy) => {
+    return (
+      <a
+        href={policy.href}
+        class="group rounded-3xl border border-white/10 bg-white/5 p-8 transition hover:border-blue-400/40 hover:bg-white/10"
+      >
+        <h2 class="text-2xl font-semibold text-white group-hover:text-blue-300">
+          {policy.title}
+        </h2>
 
-            <p class="mt-4 text-slate-300">
-              {policy.description}
-            </p>
+        <p class="mt-4 text-slate-300">
+          {policy.description}
+        </p>
 
-            <div class="mt-8 font-semibold text-blue-300">
-              Read policy →
-            </div>
-          </a>
+        <div class="mt-8 font-semibold text-blue-300">
+          Read policy →
+        </div>
+      </a>
+    );
+  })}
+</div>
 </Layout>
