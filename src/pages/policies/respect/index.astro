@@ -1,0 +1,79 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+const policies = [
+  {
+    title: "Players",
+    href: "/policies/respect/players",
+    description:
+      "Behaviour and conduct expectations for all players representing WWFC.",
+  },
+
+  {
+    title: "Coaches",
+    href: "/policies/respect/coaches",
+    description:
+      "Professional standards and safeguarding expectations for coaches and volunteers.",
+  },
+
+  {
+    title: "Parents & Spectators",
+    href: "/policies/respect/parents-spectators",
+    description:
+      "Supporting football positively and respectfully from the sidelines.",
+  },
+];
+---
+
+<Layout
+  title="Respect Code of Conduct | Wroughton & Wichelstowe FC"
+  description="WWFC Respect codes of conduct."
+>
+  <section class="bg-[#04163a] py-24 text-white">
+    <div class="mx-auto max-w-5xl px-6">
+
+      <a
+        href="/policies"
+        class="text-sm font-semibold text-blue-300 hover:text-blue-200"
+      >
+        ← Back to policies
+      </a>
+
+      <div class="mt-10 max-w-3xl">
+        <p class="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-blue-300">
+          FA RESPECT
+        </p>
+
+        <h1 class="text-5xl font-light tracking-tight sm:text-6xl">
+          Respect Code of Conduct
+        </h1>
+
+        <p class="mt-6 text-lg leading-relaxed text-slate-300">
+          WWFC promotes positive behaviour, inclusion, respect and fair play
+          across all football activities.
+        </p>
+      </div>
+
+      <div class="mt-16 grid gap-6 md:grid-cols-3">
+        {policies.map((policy) => (
+          <a
+            href={policy.href}
+            class="group rounded-3xl border border-white/10 bg-white/5 p-8 transition hover:border-blue-400/40 hover:bg-white/10"
+          >
+            <h2 class="text-2xl font-semibold text-white group-hover:text-blue-300">
+              {policy.title}
+            </h2>
+
+            <p class="mt-4 text-slate-300">
+              {policy.description}
+            </p>
+
+            <div class="mt-8 font-semibold text-blue-300">
+              View guidance →
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>
