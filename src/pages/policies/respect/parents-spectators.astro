@@ -1,0 +1,74 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+const commitments = [
+  "Have fun; it’s what we’re all here for!",
+  "Celebrate effort and good play from both sides.",
+  "Always respect the referee and coaches, and encourage players to do the same.",
+  "Stay behind the touchline and within the Designated Spectators’ Area where provided.",
+  "When players make mistakes, offer encouragement to try again next time.",
+  "Never engage in, or tolerate, offensive, insulting or abusive language or behaviour.",
+  "Make yourself familiar with safeguarding practices and relevant England Football guidance.",
+];
+
+const consequences = [
+  "Be issued with a verbal warning or asked to leave.",
+  "Be required to meet with the club committee, league or County FA Welfare Officer.",
+  "Be obliged to undertake an FA education course.",
+  "Be requested not to attend future games, be suspended or have membership removed.",
+  "Be required to leave the club along with any dependants and/or be issued a fine.",
+];
+---
+
+<Layout
+  title="Respect Code for Parents & Spectators | Wroughton & Wichelstowe FC"
+  description="WWFC Respect Code of Conduct for parents, carers and spectators."
+>
+  <section class="bg-[#04163a] py-24 text-white">
+    <div class="mx-auto max-w-4xl px-6">
+      <a href="/policies/respect" class="text-sm font-semibold text-blue-300 hover:text-blue-200">
+        ← Back to Respect Code of Conduct
+      </a>
+
+      <div class="mt-10 rounded-3xl border border-white/10 bg-white/5 p-8 sm:p-10">
+        <p class="text-sm font-semibold uppercase tracking-[0.3em] text-blue-300">
+          FA Respect
+        </p>
+
+        <h1 class="mt-4 text-4xl font-light tracking-tight sm:text-5xl">
+          Parents, Carers & Spectators
+        </h1>
+
+        <p class="mt-6 text-lg leading-relaxed text-slate-300">
+          If we behave positively during practice and matches, our children will too.
+          By setting a good example, we help build a supportive environment where
+          everyone can enjoy themselves.
+        </p>
+
+        <div class="mt-12 grid gap-8 md:grid-cols-2">
+          <section class="rounded-2xl border border-white/10 bg-white/5 p-6">
+            <h2 class="text-2xl font-semibold text-white">I will</h2>
+
+            <ul class="mt-5 list-disc space-y-3 pl-6 text-slate-300">
+              {commitments.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </section>
+
+          <section class="rounded-2xl border border-blue-400/20 bg-blue-500/10 p-6">
+            <h2 class="text-2xl font-semibold text-white">
+              If I do not follow the code
+            </h2>
+
+            <ul class="mt-5 list-disc space-y-3 pl-6 text-slate-300">
+              {consequences.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
