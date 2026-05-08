@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import PageShell from "../../components/PageShell.astro";
+import ConstitutionModal from "../../components/ConstitutionModal.jsx";
 
 const charityLinks = [
   {
@@ -49,23 +50,28 @@ const charityLinks = [
           </p>
         </div>
 
-        <div class="mt-16 grid gap-6 md:grid-cols-2">
-          {charityLinks.map((item) => (
-            <a
-              href={item.href}
-              class="block rounded-3xl border border-white/10 bg-white/5 p-8 transition hover:border-blue-400/40 hover:bg-white/10"
-            >
-              <h2 class="text-2xl font-semibold text-white">
-                {item.title}
-              </h2>
+       <div class="mt-16 grid gap-6 md:grid-cols-2">
 
-              <p class="mt-4 leading-relaxed text-slate-300">
-                {item.description}
-              </p>
+  <ConstitutionModal client:load />
 
-              <div class="mt-8 text-sm font-semibold text-blue-300">
-                View information →
-              </div>
+  <a
+    href="/policies/committee"
+    class="block rounded-3xl border border-white/10 bg-white/5 p-8 transition hover:border-blue-400/40 hover:bg-white/10"
+  >
+    <h2 class="text-2xl font-semibold text-white">
+      Meet the Trustees
+    </h2>
+
+    <p class="mt-4 leading-relaxed text-slate-300">
+      Meet the trustees and committee members supporting WWFC governance.
+    </p>
+
+    <div class="mt-8 text-sm font-semibold text-blue-300">
+      View information →
+    </div>
+  </a>
+
+</div>
             </a>
           ))}
         </div>
