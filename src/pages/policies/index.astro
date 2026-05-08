@@ -1,5 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import PageShell from "../../components/PageShell.astro";
 
 const policies = [
 {
@@ -35,7 +36,8 @@ const policies = [
   title="Club Policies | Wroughton & Wichelstowe FC"
   description="Safeguarding and privacy policies for Wroughton & Wichelstowe FC."
 >
-  <section class="bg-[#04163a] py-24 text-white">
+ <PageShell>
+  <section class="py-24">
     <div class="mx-auto max-w-5xl px-6">
       <div class="max-w-3xl">
         <p class="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-blue-300">
@@ -74,4 +76,5 @@ const policies = [
     );
   })}
 </div>
+</PageShell>
 </Layout>
