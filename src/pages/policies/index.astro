@@ -1,0 +1,59 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const policies = [
+  {
+    title: "Safeguarding Children Policy",
+    href: "/policies/safeguarding-children",
+    description:
+      "Our commitment to safeguarding and promoting the welfare of children and young people.",
+  },
+  {
+    title: "Privacy Policy",
+    href: "/policies/privacy-policy",
+    description:
+      "How Wroughton & Wichelstowe FC collects, stores and uses personal data.",
+  },
+];
+---
+
+<Layout
+  title="Club Policies | Wroughton & Wichelstowe FC"
+  description="Safeguarding and privacy policies for Wroughton & Wichelstowe FC."
+>
+  <section class="bg-[#04163a] py-24 text-white">
+    <div class="mx-auto max-w-5xl px-6">
+      <div class="max-w-3xl">
+        <p class="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-blue-300">
+          CLUB GOVERNANCE
+        </p>
+
+        <h1 class="text-5xl font-light tracking-tight sm:text-6xl">
+          Policies & Governance
+        </h1>
+
+        <p class="mt-6 text-lg leading-relaxed text-slate-300">
+          Wroughton & Wichelstowe FC is committed to safeguarding,
+          inclusion, good governance and protecting personal information.
+        </p>
+      </div>
+
+      <div class="mt-16 grid gap-6 md:grid-cols-2">
+        {policies.map((policy) => (
+          <a
+            href={policy.href}
+            class="group rounded-3xl border border-white/10 bg-white/5 p-8 transition hover:border-blue-400/40 hover:bg-white/10"
+          >
+            <h2 class="text-2xl font-semibold text-white group-hover:text-blue-300">
+              {policy.title}
+            </h2>
+
+            <p class="mt-4 text-slate-300">
+              {policy.description}
+            </p>
+
+            <div class="mt-8 font-semibold text-blue-300">
+              Read policy →
+            </div>
+          </a>
+</Layout>
