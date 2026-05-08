@@ -1,0 +1,76 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import PageShell from "../../components/PageShell.astro";
+
+const charityLinks = [
+  {
+    title: "Club Constitution Document",
+    href: "#",
+    description:
+      "View the governing constitution and operational framework for WWFC.",
+  },
+
+  {
+    title: "Meet the Trustees",
+    href: "/policies/committee",
+    description:
+      "Meet the trustees and committee members supporting WWFC governance.",
+  },
+];
+---
+
+<Layout
+  title="Charity Information | Wroughton & Wichelstowe FC"
+  description="Charity governance and trustee information for WWFC."
+>
+  <PageShell>
+    <section class="py-24">
+      <div class="mx-auto max-w-5xl px-6">
+
+        <a
+          href="/about"
+          class="text-sm font-semibold text-blue-300 hover:text-blue-200"
+        >
+          ← Back to About
+        </a>
+
+        <div class="mt-10 max-w-3xl">
+          <p class="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-blue-300">
+            Governance
+          </p>
+
+          <h1 class="text-5xl font-light tracking-tight sm:text-6xl">
+            Charity Information
+          </h1>
+
+          <p class="mt-6 text-lg leading-relaxed text-slate-300">
+            Wroughton & Wichelstowe FC is committed to transparent governance,
+            safeguarding and community accountability.
+          </p>
+        </div>
+
+        <div class="mt-16 grid gap-6 md:grid-cols-2">
+          {charityLinks.map((item) => (
+            <a
+              href={item.href}
+              class="block rounded-3xl border border-white/10 bg-white/5 p-8 transition hover:border-blue-400/40 hover:bg-white/10"
+            >
+              <h2 class="text-2xl font-semibold text-white">
+                {item.title}
+              </h2>
+
+              <p class="mt-4 leading-relaxed text-slate-300">
+                {item.description}
+              </p>
+
+              <div class="mt-8 text-sm font-semibold text-blue-300">
+                View information →
+              </div>
+            </a>
+          ))}
+        </div>
+
+      </div>
+    </section>
+  </PageShell>
+</Layout>

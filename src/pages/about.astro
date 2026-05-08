@@ -9,10 +9,11 @@ const aboutCards = [
       "Learn more about the club’s journey, heritage and transition to Wroughton & Wichelstowe FC.",
   },
   {
-    title: "Meet the Trustees",
-    description:
-      "Information about the charity trustees responsible for governance and oversight.",
-  },
+  title: "Charity Information",
+  href: "/about/charity-information",
+  description:
+    "Governance, constitution documents and trustee information for WWFC.",
+},
   {
     title: "Club Vision",
     description:
@@ -75,7 +76,10 @@ const aboutCards = [
 </div>
       <div class="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         {aboutCards.map((card) => (
-          <article class="rounded-3xl border border-white/10 bg-white/5 p-8 transition hover:border-blue-400/40 hover:bg-white/10">
+          <a
+  href={card.href ?? "#"}
+  class="block rounded-3xl border border-white/10 bg-white/5 p-8 transition hover:border-blue-400/40 hover:bg-white/10"
+>
             <h2 class="text-2xl font-semibold text-white">
               {card.title}
             </h2>
@@ -87,7 +91,7 @@ const aboutCards = [
             <div class="mt-8 text-sm font-semibold text-blue-300">
               Coming soon
             </div>
-          </article>
+          </a>
         ))}
       </div>
     </div>
