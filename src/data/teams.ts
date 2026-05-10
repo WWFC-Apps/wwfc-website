@@ -70,7 +70,6 @@ export const sections = [
 
 
 export const teams = [
-export const teams = [
   {
     name: "Blue",
     slug: "2016-blue",
