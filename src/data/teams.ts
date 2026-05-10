@@ -1,3 +1,39 @@
+function getCurrentSeasonStartYear() {
+  const today = new Date();
+  const currentYear = today.getFullYear();
+
+  // Season rolls forward on May 31st
+  const rolloverDate = new Date(currentYear, 4, 31); // month 4 = May
+
+  return today >= rolloverDate ? currentYear : currentYear - 1;
+}
+
+const seasonStartYear = getCurrentSeasonStartYear();
+
+export const currentSeason = {
+  startYear: seasonStartYear,
+  label: `${seasonStartYear}/${String(seasonStartYear + 1).slice(-2)}`,
+};
+
+export function getYouthAgeGroup(birthYear: number) {
+  const age = currentSeason.startYear - birthYear;
+  return `U${age}`;
+}
+
+export function getYouthAgeGroupSlug(birthYear: number) {
+  return getYouthAgeGroup(birthYear).toLowerCase();
+}
+
+export const youthAgeGroups = Array.from({ length: 10 }, (_, index) => {
+  const age = index + 9;
+
+  return {
+    ageGroup: `U${age}`,
+    slug: `u${age}`,
+    season: currentSeason.label,
+  };
+});
+
 export const sections = [
   {
     slug: "adult-senior-football",
@@ -32,19 +68,21 @@ export const sections = [
   },
 ];
 
+
 export const teams = [
-  {
-    name: "Example Youth Team",
-    slug: "example-youth-team",
-    section: "youth-football-mixed",
-    ageGroup: "U10",
-    category: "Youth Football (Mixed)",
-    manager: "TBC",
-    training: "TBC",
-    venue: "TBC",
-    recruiting: true,
-    description: "Example mixed youth football team. Replace this with real team information.",
-  },
+{
+  name: "Blue",
+  slug: "2018-blue",
+  section: "youth-football-mixed",
+  birthYear: 2018,
+  category: "Youth Football (Mixed)",
+  manager: "TBC",
+  training: "TBC",
+  venue: "TBC",
+  recruiting: true,
+  description: "Mixed youth football team.",
+},
+
   {
     name: "Wildcats",
     slug: "wildcats",
