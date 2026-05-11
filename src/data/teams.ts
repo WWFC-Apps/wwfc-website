@@ -76,6 +76,17 @@ export const youthAgeGroups = Array.from({ length: 10 }, (_, index) => {
   };
 });
 
+
+
+function slugify(value: string) {
+  return value
+    .toLowerCase()
+    .trim()
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
 const csvPath = path.resolve("./src/data/teams.csv");
 
 const fileContent = fs.readFileSync(csvPath);
@@ -85,13 +96,17 @@ const rawTeams = parse(fileContent, {
   skip_empty_lines: true,
 });
 
-export const teams = rawTeams.map((team: any) => ({
-  ...team,
+export const teams = rawTeams.map((team: any) => {
+  const birthYear = team.birthYear ? Number(team.birthYear) : null;
+  const teamName = team.teamName?.trim() || "team";
 
-  birthYear: team.birthYear
-    ? Number(team.birthYear)
-    : null,
-
-  recruiting:
-    String(team.recruiting).toLowerCase() === "true",
-}));
+  return {
+    ...team,
+    teamName,
+    birthYear,
+    slug: birthYear
+      ? `${birthYear}-${slugify(teamName)}`
+      : slugify(teamName),
+    recruiting: String(team.recruiting).toLowerCase() === "true",
+  };
+});
