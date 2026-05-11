@@ -21,7 +21,7 @@ const ageGroup = team.birthYear
   : null;
 ---
 
-<Layout title={`${team.name} | Wroughton & Wichelstowe FC`}>
+<Layout title={`${team.teamName} | Wroughton & Wichelstowe FC`}>
   <PageShell>
     <section class="mx-auto max-w-6xl px-6 py-20">
       <a href="/teams" class="text-sm font-semibold text-blue-300 hover:text-blue-200">
@@ -35,7 +35,7 @@ const ageGroup = team.birthYear
       )}
 
       <h1 class="mt-4 text-5xl font-light tracking-tight text-white">
-        {ageGroup ? `${ageGroup} ${team.name}` : team.name}
+        {ageGroup ? `${ageGroup} ${team.teamName}` : team.teamName}
       </h1>
 
       <p class="mt-6 max-w-3xl text-lg leading-relaxed text-slate-300">
