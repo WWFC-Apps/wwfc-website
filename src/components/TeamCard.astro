@@ -1,14 +1,9 @@
 ---
-import {
-  getYouthAgeGroup,
-  currentSeason,
-} from "../data/teams";
+import { getYouthAgeGroup, currentSeason } from "../data/teams";
 
 const { team } = Astro.props;
 
-const ageGroup = team.birthYear
-  ? getYouthAgeGroup(team.birthYear)
-  : null;
+const ageGroup = team.birthYear ? getYouthAgeGroup(team.birthYear) : null;
 ---
 
 <a
@@ -24,7 +19,7 @@ const ageGroup = team.birthYear
       )}
 
       <h2 class="mt-3 text-2xl font-semibold text-white">
-        {team.name}
+        {team.teamName}
       </h2>
     </div>
 
@@ -38,37 +33,6 @@ const ageGroup = team.birthYear
   <p class="mt-4 text-slate-300">
     {team.description}
   </p>
-
-  <dl class="mt-6 space-y-2 text-sm text-slate-400">
-    <div>
-      <dt class="inline font-semibold text-slate-200">
-        Manager:
-      </dt>
-      <dd class="inline">
-        {" "}{team.manager}
-      </dd>
-    </div>
-
-    <div>
-      <dt class="inline font-semibold text-slate-200">
-        Training:
-      </dt>
-      <dd class="inline">
-        {" "}{team.training}
-      </dd>
-    </div>
-
-    {team.venue && (
-      <div>
-        <dt class="inline font-semibold text-slate-200">
-          Venue:
-        </dt>
-        <dd class="inline">
-          {" "}{team.venue}
-        </dd>
-      </div>
-    )}
-  </dl>
 
   <p class="mt-6 font-semibold text-blue-300 transition group-hover:text-blue-200">
     View team →
