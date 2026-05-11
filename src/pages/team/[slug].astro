@@ -58,7 +58,18 @@ const ageGroup = team.birthYear
           <p class="mt-2 text-slate-300">{team.venue}</p>
         </div>
       </div>
+{team.contactEmail && (
+  <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+    <h2 class="font-semibold text-white">Contact</h2>
 
+    <a
+      href={`mailto:${team.contactEmail}`}
+      class="mt-2 inline-block text-blue-300 hover:text-blue-200"
+    >
+      {team.contactEmail}
+    </a>
+  </div>
+)}
       <section class="mt-10 rounded-2xl border border-white/10 bg-white/5 p-6">
   <h2 class="text-xl font-semibold text-white">Team Gallery</h2>
 
