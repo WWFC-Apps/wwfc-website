@@ -33,7 +33,7 @@ import PageShell from "../../components/PageShell.astro";
             href={`/teams/${section.slug}`}
             class="group rounded-3xl border border-white/10 bg-white/5 p-8 transition hover:border-blue-400/40 hover:bg-white/10"
           >
-            <div class="flex h-full flex-col justify-between">
+            <div class="flex flex-col">
               
               <div>
                 <h2 class="text-2xl font-semibold text-white transition group-hover:text-blue-300">
@@ -62,7 +62,7 @@ import PageShell from "../../components/PageShell.astro";
                 </p>
               </div>
 
-    <div class="mt-8">
+    <div class="mt-6">
  {
   section.slug === "tournament-football" && (
     <div class="mb-6 flex h-24 items-end">
