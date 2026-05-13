@@ -35,6 +35,10 @@ const ageGroup = team.birthYear ? getYouthAgeGroup(team.birthYear) : null;
   </p>
 
   <p class="mt-6 font-semibold text-blue-300 transition group-hover:text-blue-200">
-    View team →
-  </p>
+  {
+    team.section === "sessional-football"
+      ? "View sessions →"
+      : "View team →"
+  }
+</p>
 </a>
