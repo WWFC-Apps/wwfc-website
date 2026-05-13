@@ -53,10 +53,15 @@ import PageShell from "../../components/PageShell.astro";
                 </p>
               </div>
 
-              <div class="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-blue-300">
-                Explore teams
-                <span aria-hidden="true">→</span>
-              </div>
+             <div class="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-blue-300">
+  {
+    section.slug === "sessional-football"
+      ? "Explore sessions"
+      : "Explore teams"
+  }
+
+  <span aria-hidden="true">→</span>
+</div>
 
             </div>
           </a>
