@@ -41,7 +41,7 @@ export const sections = [
     slug: "pan-disability-football",
     title: "Pan-Disability Football",
     description:
-      "Inclusive football opportunities for players of all abilities.",
+      "Inclusive football opportunities for players of all abilities. Wiltshire Ability-Counts Football League",
   },
   {
     slug: "sessional-football",
