@@ -48,6 +48,13 @@ const filteredTeams = teams.filter((team) => {
         {displayName}
       </h1>
 
+{section === "sessional-football" && (
+  <img
+    src="/images/fa-wildcats.png"
+    alt="FA Wildcats"
+    class="mt-8 h-32 w-auto rounded-2xl bg-white/90 p-3 shadow-lg shadow-black/20"
+  />
+)}
       <p class="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300">
         Browse WWFC {displayName.toLowerCase()} teams and age groups.
       </p>
