@@ -53,14 +53,28 @@ import PageShell from "../../components/PageShell.astro";
                 </p>
               </div>
 
-             <div class="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-blue-300">
+    <div class="mt-8">
   {
-    section.slug === "sessional-football"
-      ? "Explore sessions"
-      : "Explore teams"
+    section.slug === "tournament-football" && (
+      <img
+        src="/images/trophy.jpg"
+        alt="Tournament Football"
+        class="mb-6 h-20 w-auto rounded-2xl bg-white/90 p-3"
+      />
+    )
   }
 
-  <span aria-hidden="true">→</span>
+  <div class="inline-flex items-center gap-2 text-sm font-semibold text-blue-300">
+    {
+      section.slug === "sessional-football"
+        ? "Explore sessions"
+        : section.slug === "tournament-football"
+        ? "Explore tournaments"
+        : "Explore teams"
+    }
+
+    <span aria-hidden="true">→</span>
+  </div>
 </div>
 
             </div>
