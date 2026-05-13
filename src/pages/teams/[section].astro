@@ -44,19 +44,25 @@ const filteredTeams = teams.filter((team) => {
         ← Back to all sections
       </a>
 
-      <h1 class="mt-8 text-5xl font-light tracking-tight text-white">
-        {displayName}
-      </h1>
+      <div class="mt-8 flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+  <div>
+    <h1 class="text-5xl font-light tracking-tight text-white">
+      {displayName}
+    </h1>
 
-{section === "sessional-football" && (
-  <div class="mt-8 flex justify-end">
+    <p class="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300">
+      Browse WWFC {displayName.toLowerCase()} teams and age groups.
+    </p>
+  </div>
+
+  {section === "sessional-football" && (
     <img
       src="/images/fa-wildcats.png"
       alt="FA Wildcats"
       class="h-32 w-auto rounded-2xl bg-white/90 p-3 shadow-lg shadow-black/20"
     />
-  </div>
-)}
+  )}
+</div>
       <p class="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300">
         Browse WWFC {displayName.toLowerCase()} teams and age groups.
       </p>
