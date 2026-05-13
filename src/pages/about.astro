@@ -58,21 +58,31 @@ const aboutCards = [
           providing inclusive football opportunities across our local community.
         </p>
       </div>
-<div class="mt-10 flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 px-5 py-4 backdrop-blur">
+<div class="mt-10 flex flex-col gap-6 rounded-2xl border border-white/10 bg-white/5 px-6 py-5 backdrop-blur sm:flex-row sm:items-center sm:justify-between">
+  
   <img
     src="/images/2star.png"
     alt="England Football Accredited Two Star Club"
     class="h-28 w-auto rounded-xl bg-white/90 p-2"
   />
 
-  <div>
+  <div class="flex-1 text-center sm:text-left">
     <p class="text-sm font-semibold uppercase tracking-[0.2em] text-blue-300">
       England Football Accredited
     </p>
+
     <p class="mt-2 text-slate-300">
       Recognised for delivering safe, inclusive and high-quality grassroots football.
     </p>
   </div>
+
+  <img
+    src="/images/wiltsfa.png"
+    alt="Wiltshire FA"
+    class="h-24 w-auto object-contain"
+  />
+
+</div>
 </div>
       <div class="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         {aboutCards.map((card) => (
