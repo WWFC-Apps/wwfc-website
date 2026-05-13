@@ -40,20 +40,27 @@ import PageShell from "../../components/PageShell.astro";
             {section.title}
           </h2>
 
-          {(section.slug === "sessional-football" ||
-            section.slug === "tournament-football") && (
+        {(
+  section.slug === "sessional-football" ||
+  section.slug === "tournament-football" ||
+  section.slug === "pan-disability-football"
+) && (
             <div class="mt-4 mb-4 flex h-16 items-center">
               <img
-                src={
-                  section.slug === "sessional-football"
-                    ? "/images/fa-wildcats.png"
-                    : "/images/trophy.jpg"
-                }
-                alt={
-                  section.slug === "sessional-football"
-                    ? "FA Wildcats"
-                    : "Tournament Football"
-                }
+               src={
+  section.slug === "sessional-football"
+    ? "/images/fa-wildcats.png"
+    : section.slug === "tournament-football"
+    ? "/images/trophy.jpg"
+    : "/images/ability.png"
+}
+              alt={
+  section.slug === "sessional-football"
+    ? "FA Wildcats"
+    : section.slug === "tournament-football"
+    ? "Tournament Football"
+    : "Pan-Disability Football"
+}
                 class="h-14 w-auto rounded-2xl bg-white/90 p-2"
               />
             </div>
