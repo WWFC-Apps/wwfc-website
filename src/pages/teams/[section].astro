@@ -1,6 +1,6 @@
 ---
-
 import Layout from "../../layouts/Layout.astro";
+import PageShell from "../../components/PageShell.astro";
 import TeamCard from "../../components/TeamCard.astro";
 import { teams } from "../../data/teams";
 
@@ -38,8 +38,8 @@ const filteredTeams = teams.filter((team) => {
 ---
 
 <Layout title={`${displayName} Teams | Wroughton & Wichelstowe FC`}>
-  <main class="bg-[#04163a]">
-    <section class="mx-auto max-w-6xl px-6 py-20">
+<PageShell>
+  <section class="mx-auto max-w-6xl px-6 py-20">
       <a href="/teams" class="text-sm font-semibold text-blue-300 hover:text-blue-200">
         ← Back to all sections
       </a>
@@ -54,7 +54,6 @@ const filteredTeams = teams.filter((team) => {
       Browse WWFC {displayName.toLowerCase()} teams and age groups.
     </p>
   </div>
-
   {section === "sessional-football" && (
     <img
       src="/images/fa-wildcats.png"
@@ -63,12 +62,11 @@ const filteredTeams = teams.filter((team) => {
     />
   )}
 </div>   
-
       <div class="mt-12 grid gap-6 md:grid-cols-2">
         {filteredTeams.map((team) => (
           <TeamCard team={team} />
         ))}
       </div>
-    </section>
-  </main>
+   </section>
+</PageShell>
 </Layout>
