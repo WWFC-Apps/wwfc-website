@@ -51,7 +51,7 @@ The website is intended to support:
 
 # Deployment Architecture
 
-- GitHub   ↓Vercel   ↓www.wwfc.org.uk
+- GitHub   ->   Vercel   ->    www.wwfc.org.uk
 
 ---
 
@@ -64,12 +64,9 @@ The website is intended to support:
 ---
 
 # Development Workflow
-- Switch to development branch
-= git checkout develop
-- Pull latest changes
-- git pull
-- Commit work
-- git add .git commit -m "Description of changes"git push
+- Switch to development branch -> git checkout develop
+- Pull latest changes -> gut pull
+- Commit work   ->    git add . ->  git commit -m "Description of changes"  ->  git push
 
 ---
 
@@ -78,7 +75,7 @@ The website is intended to support:
 Before releasing:
 - npm run build
     Then:
-= git checkout maingit merge developgit push
+= git checkout main   ->   git merge develop  ->  git push
     Vercel will automatically deploy production from the main branch.
 
 ---
@@ -180,9 +177,9 @@ Before releasing:
 
     Teams are managed using:
 
-    src/data/teams.csv
+    src/data/teams.csv  (XLS Spreadsheet)
 
-    This allows non-technical club administrators to update:
+    This allows non-technical club administrators to easily update:
 
             teams
             managers
@@ -191,7 +188,7 @@ Before releasing:
             galleries
             contact emails
 
-    without editing code.
+    without editing code. Save the spreadhseet as a CSV to the correct file location and push to repo.
 
     Recommended Workflow
 
