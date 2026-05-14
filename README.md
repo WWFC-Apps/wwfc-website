@@ -17,9 +17,9 @@ The website is intended to support:
 - Venue and visiting team guidance
 - Contact and newsletter integrations
 - Community engagement and sponsorship
-- Modern mobile-first user experience
 - Recruitment and volunteering
 - Sponsor and partner engagement
+- Modern mobile-first user experience
 
 ---
 
@@ -39,7 +39,8 @@ The website is intended to support:
 # Production Build
 
 - Always run a production build before pushing changes:
-- npm run build
+         npm run build
+
 - This catches:
 
         Astro route issues
@@ -56,11 +57,14 @@ The website is intended to support:
 ---
 
 # Environment Strategy
+- 2 branches : "main" branch and "develop" branch
+
     Branch      Purpose             Deployment
 
     main        Production          Live site
     develop     Active development  Vercel preview
 
+- develop any new features in the "develop" branch. then merge the working code into "main"
 ---
 
 # Development Workflow
@@ -73,9 +77,8 @@ The website is intended to support:
 # Production Release Workflow
 
 Before releasing:
-- npm run build
-    Then:
-= git checkout main   ->   git merge develop  ->  git push
+
+- git checkout main   ->   git merge develop  ->  git push
     Vercel will automatically deploy production from the main branch.
 
 ---
@@ -275,29 +278,6 @@ Before releasing:
         Venue guidance
         Privacy policy support
 
-# Future Enhancements
-Planned improvements include:
-
-
-    Fixtures & results
-
-    Sponsor management
-
-    Team galleries
-
-    CMS/content collections
-
-    Contact/join forms
-
-    Volunteer recruitment
-
-    Mobile navigation enhancements
-
-    Search engine optimisation
-
-    Accessibility audit
-
-    Tournament management pages
 
 ---
 # Repository Access
