@@ -10,13 +10,16 @@ This project supports the club’s transition to a CIO registered charity and mo
 
 The website is intended to support:
 
-- Community football participation
-- Team and pathway information
-- Club governance and safeguarding
+- Club and governance information
+- Youth, adult and inclusive football pathways
+- Team management and automated seasonal progression
+- Respect and safeguarding information
+- Venue and visiting team guidance
+- Contact and newsletter integrations
+- Community engagement and sponsorship
+- Modern mobile-first user experience
 - Recruitment and volunteering
 - Sponsor and partner engagement
-- Inclusive football development
-- Modern mobile-first user experience
 
 ---
 
@@ -29,7 +32,8 @@ The website is intended to support:
 | TailwindCSS | Styling and responsive layout |
 | Vercel | Hosting and deployments |
 | GitHub | Source control and collaboration |
-
+| Tally Forms | Form management and integration |
+| CSV files | Team Management |
 ---
 
 # Production Build
@@ -95,7 +99,8 @@ Before releasing:
 
 
 # Project Structure
-- src/  components/  layouts/  pages/  data/public/  images/
+- src/  components/  data/  layouts/  pages/ 
+- public/  images/
 
 ---
 
@@ -171,6 +176,107 @@ Before releasing:
 
 
 ---
+# Team Management System
+
+    Teams are managed using:
+
+    src/data/teams.csv
+
+    This allows non-technical club administrators to update:
+
+            teams
+            managers
+            training details
+            recruitment status
+            galleries
+            contact emails
+
+    without editing code.
+
+    Recommended Workflow
+
+    Maintain:
+
+    teams-master.xlsx (editable master spreadsheet)
+    export to:
+        src/data/teams.csv
+
+    CSV files do not retain:
+
+    dropdowns
+    formatting
+    validation rules
+
+    so the XLSX file should remain the admin editing source.
+
+# Team Progression
+
+    Youth age groups are generated automatically from:
+
+        player birth year
+        current season
+
+    The website automatically rolls forward to the next season on:
+
+        31 May
+
+    Example:
+
+        2013 birth year
+        season 2025/26
+        displayed as U12
+
+        After rollover:
+
+        season 2026/27
+        displayed as U13
+
+    This minimises annual admin overhead.
+
+# Team Galleries
+
+    Team galleries are supported via image paths stored in teams.csv.
+
+    Images should be placed in:
+
+            public/images/teams/
+
+        Example:
+
+            public/images/teams/2013-blue/
+
+        Gallery image paths are pipe-separated in CSV:
+
+            /images/teams/2013-blue/photo1.jpg|/images/teams/2013-blue/photo2.jpg
+
+# Forms & Contact
+
+    Forms are powered by:
+
+    Tally
+
+    Current integrations:
+
+        Contact form
+        Newsletter signup
+
+    Tally handles:
+
+        form submission storage
+        email notifications
+        spam protection
+        GDPR-friendly handling         
+
+# Governance & Policies
+
+    The site includes:
+
+        FA Respect Codes of Conduct
+        Charity governance information
+        Trustee information
+        Safeguarding contacts
+        Venue guidance
+        Privacy policy support
 
 # Future Enhancements
 Planned improvements include:
@@ -197,10 +303,19 @@ Planned improvements include:
     Tournament management pages
 
 ---
+# Repository Access
+
+    This repository is private and intended solely for authorised WWFC collaborators.
+
+    No reuse, redistribution or replication is permitted without written permission from Wroughton & Wichelstowe FC.
 
 # License
+    This project is proprietary software.
+
+    All rights reserved © Wroughton & Wichelstowe FC.
+
     Copyright (c) 2026 Wroughton & Wichelstowe Football Club
-    All rights reserved.
+
     This source code, website design, branding, content, graphics, assets and associated materials are proprietary to Wroughton & Wichelstowe Football Club (WWFC).
     No part of this repository may be copied, modified, distributed, sublicensed, published or used in whole or in part without prior written permission from Wroughton & Wichelstowe Football Club.
     This repository is provided for authorised development and operational purposes only.
