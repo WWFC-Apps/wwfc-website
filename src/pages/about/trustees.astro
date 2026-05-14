@@ -1,0 +1,78 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import PageShell from "../../components/PageShell.astro";
+
+const trustees = [
+  {
+    name: "Trustee Name",
+    role: "Chair of Trustees",
+    description:
+      "Responsible for supporting the strategic direction and governance of the charity.",
+  },
+  {
+    name: "Trustee Name",
+    role: "Trustee",
+    description:
+      "Supports governance, safeguarding oversight and community engagement.",
+  },
+  {
+    name: "Trustee Name",
+    role: "Trustee",
+    description:
+      "Supports financial oversight and long-term sustainability planning.",
+  },
+];
+---
+
+<Layout
+  title="Trustees | Wroughton & Wichelstowe FC"
+  description="Meet the charity trustees supporting governance and oversight at WWFC."
+>
+  <PageShell>
+    <section class="py-24">
+      <div class="mx-auto max-w-6xl px-6">
+
+        <a
+          href="/about/charity-information"
+          class="text-sm font-semibold text-blue-300 hover:text-blue-200"
+        >
+          ← Back to Charity Information
+        </a>
+
+        <div class="mt-10 max-w-3xl">
+          <p class="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-blue-300">
+            Governance
+          </p>
+
+          <h1 class="text-5xl font-light tracking-tight sm:text-6xl">
+            Meet the Trustees
+          </h1>
+
+          <p class="mt-6 text-lg leading-relaxed text-slate-300">
+            The trustees provide governance, oversight and strategic leadership
+            for Wroughton & Wichelstowe FC as a registered charity football club.
+          </p>
+        </div>
+
+        <div class="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {trustees.map((trustee) => (
+            <article class="rounded-3xl border border-white/10 bg-white/5 p-8">
+              <p class="text-sm font-semibold uppercase tracking-[0.2em] text-blue-300">
+                {trustee.role}
+              </p>
+
+              <h2 class="mt-4 text-2xl font-semibold text-white">
+                {trustee.name}
+              </h2>
+
+              <p class="mt-4 leading-relaxed text-slate-300">
+                {trustee.description}
+              </p>
+            </article>
+          ))}
+        </div>
+
+      </div>
+    </section>
+  </PageShell>
+</Layout>
