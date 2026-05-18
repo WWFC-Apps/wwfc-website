@@ -85,6 +85,46 @@ const ageGroup = team.birthYear
 </section>
 
       <div class="mt-10 rounded-2xl border border-blue-400/20 bg-blue-500/10 p-6">
+        {team.sponsorName && (
+  <section class="mt-10 rounded-2xl border border-white/10 bg-white/5 p-6">
+    <p class="text-sm font-semibold uppercase tracking-[0.2em] text-blue-300">
+      Team Sponsor
+    </p>
+
+    <div class="mt-5 flex flex-col gap-5 sm:flex-row sm:items-center">
+      {team.sponsorLogo && (
+        <img
+          src={team.sponsorLogo}
+          alt={`${team.sponsorName} logo`}
+          class="h-20 w-auto rounded-xl bg-white/90 p-2"
+        />
+      )}
+
+      <div>
+        <h2 class="text-2xl font-semibold text-white">
+          {team.sponsorName}
+        </h2>
+
+        {team.sponsorDescription && (
+          <p class="mt-3 text-slate-300">
+            {team.sponsorDescription}
+          </p>
+        )}
+
+        {team.sponsorUrl && (
+          <a
+            href={team.sponsorUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-4 inline-flex font-semibold text-blue-300 hover:text-blue-200"
+          >
+            Visit sponsor website →
+          </a>
+        )}
+      </div>
+    </div>
+  </section>
+)}
         <h2 class="text-xl font-semibold text-white">Interested in joining?</h2>
         <p class="mt-3 text-slate-300">
           Contact the club to ask about availability for this team.
