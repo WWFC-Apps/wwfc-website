@@ -33,7 +33,7 @@ const ageGroup = team.birthYear ? getYouthAgeGroup(team.birthYear) : null;
   <p class="mt-4 text-slate-300">
     {team.description}
   </p>
-#{team.sponsorName && (
+{team.sponsorName && (
   <div class="mt-6 rounded-2xl border border-white/10 bg-white/5 p-4">
     <p class="text-xs font-semibold uppercase tracking-[0.2em] text-blue-300">
       Team Sponsor
@@ -45,11 +45,13 @@ const ageGroup = team.birthYear ? getYouthAgeGroup(team.birthYear) : null;
       </p>
 
       {team.sponsorLogo && (
-        <img
-          src={team.sponsorLogo}
-          alt={`${team.sponsorName} logo`}
-          class="h-12 w-auto object-contain"
-        />
+        <div class="rounded-2xl bg-white/95 p-3 shadow-lg shadow-black/10">
+          <img
+            src={team.sponsorLogo}
+            alt={`${team.sponsorName} logo`}
+            class="h-16 w-auto object-contain"
+          />
+        </div>
       )}
     </div>
   </div>
