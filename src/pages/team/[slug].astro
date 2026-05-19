@@ -59,7 +59,7 @@ const ageGroup = team.birthYear
         </div>
       </div>
 {team.contactEmail && (
-  <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+  <div class="mt-6 rounded-2xl border border-white/10 bg-white/5 p-6"></div>
     <h2 class="font-semibold text-white">Contact</h2>
 
     <a
@@ -79,7 +79,7 @@ const ageGroup = team.birthYear
         <img
           src={image}
           alt={`${team.teamName} team photo`}
-          class="w-full rounded-2xl object-contain"
+          class="h-64 w-full rounded-2xl object-cover"
         />
       ))}
     </div>
