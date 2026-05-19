@@ -59,7 +59,7 @@ const ageGroup = team.birthYear
         </div>
       </div>
 {team.contactEmail && (
-  <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+  <div class="mt-6 rounded-2xl border border-white/10 bg-white/5 p-6">
     <h2 class="font-semibold text-white">Contact</h2>
 
     <a
@@ -73,15 +73,21 @@ const ageGroup = team.birthYear
       <section class="mt-10 rounded-2xl border border-white/10 bg-white/5 p-6">
   <h2 class="text-xl font-semibold text-white">Team Gallery</h2>
 
-  <p class="mt-3 text-slate-300">
-    Photos for this team will be added soon.
-  </p>
-
-  <div class="mt-6 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-    <div class="aspect-[4/3] rounded-2xl bg-white/10"></div>
-    <div class="aspect-[4/3] rounded-2xl bg-white/10"></div>
-    <div class="aspect-[4/3] rounded-2xl bg-white/10"></div>
-  </div>
+  {team.gallery && team.gallery.length > 0 ? (
+    <div class="mt-6 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+      {team.gallery.map((image) => (
+        <img
+          src={image}
+          alt={`${team.teamName} team photo`}
+          class="h-64 w-full rounded-2xl object-cover"
+        />
+      ))}
+    </div>
+  ) : (
+    <p class="mt-3 text-slate-300">
+      Photos for this team will be added soon.
+    </p>
+  )}
 </section>
 
       <div class="mt-10 rounded-2xl border border-blue-400/20 bg-blue-500/10 p-6">
