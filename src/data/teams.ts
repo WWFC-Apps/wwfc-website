@@ -100,6 +100,7 @@ export const teams = rawTeams.map((team: any) => {
   const birthYear = team.birthYear ? Number(team.birthYear) : null;
   const teamName = team.teamName?.trim() || "team";
 
+  
   return {
     ...team,
     teamName,
