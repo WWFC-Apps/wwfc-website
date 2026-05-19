@@ -1,35 +1,35 @@
-section,birthYear,teamName,manager,training,venue,recruiting,description,contactEmail,sponsorName,sponsorLogo,sponsorDescription,sponsorUrl
+section,birthYear,teamName,manager,training,venue,recruiting,description,contactEmail,sponsorName,sponsorLogo,sponsorDescription,sponsorUrl,gallery
 girls-football,2018,Blackcats,Ellie Stratford,Tuesdays 18:00,The Deanery School,TRUE,"A new girls team, formed in 2026.	 If your daughter would would like to be considered for a trial, please register your interest via the email address below.",wyfc.blackcats@gmail.com,Hannah McDanielson,/images/sponsors/hannah.webp,"Unique bespoke jewellery. Designed for life, created with care.
-Sentimental jewellery that celebrates your story.",https://hannahmcdanielsonjewellery.co.uk/
-girls-football,2013,Magic,Will Crowe,Tuesday 18.30,The Deanery School,TRUE,"Established in 2023, this team play in the North Wilts Youth Football League. If your daughter would would like to be considered for a trial, please register your interest via the email address below.",wyfc.magic@gmail.com,Ocean Escape.co.uk,/images/sponsors/ocean.png,"Ocean Escape is the perfect, modern, holiday home for families or celebration events. Situated in the stunning coastal seaside village of Westward Ho ! in North Devon. We are Proud to be supporting grassroots girls football ----- Go Magic !!",http://oceanescape.co.uk
-youth-football-mixed,2017,Panthers,Stephen de Oliveria,Thursday 18:00,The Ridgeway School,TRUE,The Panthers are a team for boys and girls playing in the North Wilts FA Red Development League,wyfc.panthers@gmail.com,,,,
-youth-football-mixed,2017,Rhinos,Rob King,Tuesday evenings,Wroughton Junior School,TRUE,The Rhinos are a team for boys and girls.,"	wyfc.rhinos@gmail.com",,,,
-youth-football-mixed,2016,Rams,Lisa Coe & Adam Rutter,Tuesdays 18:00,The Ridgeway School,TRUE,"The Rams are a team for boys and girls, playing in the North Wilts Youth Football U9 Development Green League",wyfc.rams@gmail.com,,,,
-youth-football-mixed,2016,Rangers,Stuart Beggs,Tuesdays 17.30,The Deanery School,TRUE,"The Rangers are a team for boys and girls, playing in the North Wilts Youth Football U9 Development Green League",wyfc.rangers01@gmail.com,,,,
-youth-football-mixed,2015,Rockets,Dave Salter,Thursday evenings,The Ridgeway School,TRUE,"The Rockets are a team for boys and girls, playing in the North Wilts Youth Football U10 Development Red League",wyfc.rockets@gmail.com,,,,
-youth-football-mixed,2014,Dragons,Martin Speakman,Tuesday evenings,The Ridgeway School,TRUE,"The Dragons are a team for boys and girls, playing in the North Wilts Youth Football U11 Development Blue League",wyfc.dragons@gmail.com,,,,
-youth-football-mixed,2014,Lightning,Michaal Webb & Holly Mills,Tuesday evenings,The Ridgeway School,TRUE,"Lightning is a team for boys and girls, playing in the North Wilts Youth Football U11 Development Purple League",wyfc.lightning@gmail.com,Head Start Skillz,/images/sponsors/headstart.png,"Unlocking Potential, Shaping Futures. We believe that training our young people on critical practical subjects will help to give them a significant head start in life. Whether it’s learning how to manage money and get the most out of their future income, providing first aid to someone in need, remaining safe online and protecting their online identity and data or using their newly acquired self-defence skills to negotiate a tricky situation.",https://headstartskillz.com/
-youth-football-mixed,2014,Foxes,Mehdi ,Tuesday evenings,The Ridgeway School,TRUE,"The Foxes are a team for boys and girls, playing in the North Wilts Youth Football U11 Development Red League",wyfc.foxes@gmail.com,,,,
-youth-football-mixed,2014,Thunder,Paul Whitewood,Tuesday evenings,The Ridgeway School,TRUE,"Thunder is a team for boys and girls, playing in the North Wilts Youth Football U11 Development Red League",wyfc.thunder@gmail.com,,,,
-youth-football-mixed,2013,Wookies,Scott Bailey,Tuesday evenings,The Ridgeway School,TRUE,"The Wookies are a team for boys and girls, playing in the North Wilts Youth Football U12 Division 2 League",wyfc.wookies@gmail.com,,,,
-youth-football-mixed,2013,Warriors,Chris Blackwell,19,The Ridgeway School,TRUE,"Warriors is a team for boys and girls, playing in the North Wilts Youth Football U12 Division 5 League",wyfc.warriors@gmail.com,,,,
-girls-football,2012,Witches,Chris Burridge,Tuesday evenings,The Deanery School,TRUE,"The Witches are a team for girls, playing in the North Wilts Youth Football U13 Division 1 Girls League",wyfc.witches@gmail.com,MJD Mechanical & Electrical Services,/images/sponsors/mjd.png,"Since 2007, MJD Mechanical & Electrical Services have been leading providers of mechanical, electrical & renewable services across Bristol and the South West. We offer a full design, installation and maintenance service across multiple sectors, including Healthcare, Education, Commercial, Retail, Hotel & Residential & Sport & Leisure, additionally we often undertake various listed, heritage and special purpose projects.",https://mjdgroup.co.uk/
+Sentimental jewellery that celebrates your story.",https://hannahmcdanielsonjewellery.co.uk/,
+girls-football,2013,Magic,Will Crowe,Tuesday 18.30,The Deanery School,TRUE,"Established in 2023, this team play in the North Wilts Youth Football League. If your daughter would would like to be considered for a trial, please register your interest via the email address below.",wyfc.magic@gmail.com,Ocean Escape.co.uk,/images/sponsors/ocean.png,"Ocean Escape is the perfect, modern, holiday home for families or celebration events. Situated in the stunning coastal seaside village of Westward Ho ! in North Devon. We are Proud to be supporting grassroots girls football ----- Go Magic !!",http://oceanescape.co.uk,/images/teams/magic/magic1.jpg
+youth-football-mixed,2017,Panthers,Stephen de Oliveria,Thursday 18:00,The Ridgeway School,TRUE,The Panthers are a team for boys and girls playing in the North Wilts FA Red Development League,wyfc.panthers@gmail.com,,,,,
+youth-football-mixed,2017,Rhinos,Rob King,Tuesday evenings,Wroughton Junior School,TRUE,The Rhinos are a team for boys and girls.,"	wyfc.rhinos@gmail.com",,,,,
+youth-football-mixed,2016,Rams,Lisa Coe & Adam Rutter,Tuesdays 18:00,The Ridgeway School,TRUE,"The Rams are a team for boys and girls, playing in the North Wilts Youth Football U9 Development Green League",wyfc.rams@gmail.com,,,,,
+youth-football-mixed,2016,Rangers,Stuart Beggs,Tuesdays 17.30,The Deanery School,TRUE,"The Rangers are a team for boys and girls, playing in the North Wilts Youth Football U9 Development Green League",wyfc.rangers01@gmail.com,,,,,
+youth-football-mixed,2015,Rockets,Dave Salter,Thursday evenings,The Ridgeway School,TRUE,"The Rockets are a team for boys and girls, playing in the North Wilts Youth Football U10 Development Red League",wyfc.rockets@gmail.com,,,,,
+youth-football-mixed,2014,Dragons,Martin Speakman,Tuesday evenings,The Ridgeway School,TRUE,"The Dragons are a team for boys and girls, playing in the North Wilts Youth Football U11 Development Blue League",wyfc.dragons@gmail.com,,,,,
+youth-football-mixed,2014,Lightning,Michaal Webb & Holly Mills,Tuesday evenings,The Ridgeway School,TRUE,"Lightning is a team for boys and girls, playing in the North Wilts Youth Football U11 Development Purple League",wyfc.lightning@gmail.com,Head Start Skillz,/images/sponsors/headstart.png,"Unlocking Potential, Shaping Futures. We believe that training our young people on critical practical subjects will help to give them a significant head start in life. Whether it’s learning how to manage money and get the most out of their future income, providing first aid to someone in need, remaining safe online and protecting their online identity and data or using their newly acquired self-defence skills to negotiate a tricky situation.",https://headstartskillz.com/,
+youth-football-mixed,2014,Foxes,Mehdi ,Tuesday evenings,The Ridgeway School,TRUE,"The Foxes are a team for boys and girls, playing in the North Wilts Youth Football U11 Development Red League",wyfc.foxes@gmail.com,,,,,
+youth-football-mixed,2014,Thunder,Paul Whitewood,Tuesday evenings,The Ridgeway School,TRUE,"Thunder is a team for boys and girls, playing in the North Wilts Youth Football U11 Development Red League",wyfc.thunder@gmail.com,,,,,
+youth-football-mixed,2013,Wookies,Scott Bailey,Tuesday evenings,The Ridgeway School,TRUE,"The Wookies are a team for boys and girls, playing in the North Wilts Youth Football U12 Division 2 League",wyfc.wookies@gmail.com,,,,,
+youth-football-mixed,2013,Warriors,Chris Blackwell,19.00,The Ridgeway School,TRUE,"Warriors is a team for boys and girls, playing in the North Wilts Youth Football U12 Division 5 League",wyfc.warriors@gmail.com,,,,,
+girls-football,2012,Witches,Chris Burridge,Tuesday evenings,The Deanery School,TRUE,"The Witches are a team for girls, playing in the North Wilts Youth Football U13 Division 1 Girls League",wyfc.witches@gmail.com,MJD Mechanical & Electrical Services,/images/sponsors/mjd.png,"Since 2007, MJD Mechanical & Electrical Services have been leading providers of mechanical, electrical & renewable services across Bristol and the South West. We offer a full design, installation and maintenance service across multiple sectors, including Healthcare, Education, Commercial, Retail, Hotel & Residential & Sport & Leisure, additionally we often undertake various listed, heritage and special purpose projects.",https://mjdgroup.co.uk/,
 girls-football,2010,Wrens,Chris Burridge & Natasha Burridge,Thursday evenings,The Deanery School,TRUE,"The Wrens are a team for girls, playing in the North Wilts Youth Football U14 Division 5 League",wyfc.wrens@gmail.com,A&J Waste Services,/images/sponsors/a&j.png,"We specialise in Materials Management for the Construction, Development and Utility sectors across the UK. With decades of industry knowledge, our highly experienced management team ensure an expert consultancy service is provided to all of our clients. Professional services we provide include Soil Waste Management, CL:AIRE Applications, Waste Classification, Earthworks Projects and Aggregate Supply to a national client base.
-A & J Waste Services Ltd are proud to be members of CL:AIRE and we share in their commitment to sustainable land reuse and development.",https://aandjwasteservices.co.uk/
-girls-football,2010,Ravens,Craig Jones & Natasha James,Thursday evenings,The Deanery School,TRUE,"The Ravens are a team for girls, playing in the North Wilts Football U14 Division 6 League.",wyfc.ravens@gmail.com,,,,
-adult-senior-football,,Mens,Paul Brown,Wednesdays,The Ridgeway School,TRUE,The Men's team is a senior team playing in the Swindon and District Community Football League,wyfc.chair@gmail.com,,,,
-pan-disability-football,,Ability-Counts,Paul Brown,tbc,The Deanery School,TRUE,an exciting new Ability-Counts team - Established May 2026,wyfc.chair@gmail.com,,,,
-sessional-football,,Wildcats,Ellie Stratford,Tuesday evenings 6pm,The Deanery School,TRUE,Free weekly sessional football for girls ages 6 to 8. Come along and join-in for free,wyfc.magic@gmail.com,,,,
-youth-football-mixed,2012,Lions,David Scott,Tuesday Evenings,Nationwide,FALSE,"The Lions are is a team for boys and girls, playing in the North Wilts Youth Football U13 Division 4 League",wyfc.lions@gmail.com,,,,
-youth-football-mixed,2012,Wasps,Reece Kewley & Jack Kewley,Tuesday Evenings,Maunsell Way,TRUE,"Wasps is a team for boys and girls, playing in the North Wilts Youth Football U13 Division 5 League",wyfc.wasps@gmail.com,,,,
+A & J Waste Services Ltd are proud to be members of CL:AIRE and we share in their commitment to sustainable land reuse and development.",https://aandjwasteservices.co.uk/,
+girls-football,2010,Ravens,Craig Jones & Natasha James,Thursday evenings,The Deanery School,TRUE,"The Ravens are a team for girls, playing in the North Wilts Football U14 Division 6 League.",wyfc.ravens@gmail.com,,,,,
+adult-senior-football,,Mens,Paul Brown,Wednesdays,The Ridgeway School,TRUE,The Men's team is a senior team playing in the Swindon and District Community Football League,wyfc.chair@gmail.com,,,,,
+pan-disability-football,,Ability-Counts,Paul Brown,tbc,The Deanery School,TRUE,an exciting new Ability-Counts team - Established May 2026,wyfc.chair@gmail.com,,,,,
+sessional-football,,Wildcats,Ellie Stratford,Tuesday evenings 6pm,The Deanery School,TRUE,Free weekly sessional football for girls ages 6 to 8. Come along and join-in for free,wyfc.magic@gmail.com,,,,,
+youth-football-mixed,2012,Lions,David Scott,Tuesday Evenings,Nationwide,FALSE,"The Lions are is a team for boys and girls, playing in the North Wilts Youth Football U13 Division 4 League",wyfc.lions@gmail.com,,,,,
+youth-football-mixed,2012,Wasps,Reece Kewley & Jack Kewley,Tuesday Evenings,Maunsell Way,TRUE,"Wasps is a team for boys and girls, playing in the North Wilts Youth Football U13 Division 5 League",wyfc.wasps@gmail.com,,,,,
 youth-football-mixed,2012,Wolves,Ian Porter,Monday Evenings,The Ridgeway School,FALSE,"The Wolves are a team for boys and girls, playing in the North Wilts Youth Football U13 Division 4 League",wyfc.wolves@gmail.com,A&J Waste Services,/images/sponsors/a&j.png,"We specialise in Materials Management for the Construction, Development and Utility sectors across the UK. With decades of industry knowledge, our highly experienced management team ensure an expert consultancy service is provided to all of our clients. Professional services we provide include Soil Waste Management, CL:AIRE Applications, Waste Classification, Earthworks Projects and Aggregate Supply to a national client base.
-A & J Waste Services Ltd are proud to be members of CL:AIRE and we share in their commitment to sustainable land reuse and development.",https://aandjwasteservices.co.uk/
+A & J Waste Services Ltd are proud to be members of CL:AIRE and we share in their commitment to sustainable land reuse and development.",https://aandjwasteservices.co.uk/,
 youth-football-mixed,2011,Hurricanes,David Mills,Wednesday Evenings,Maunsell Way,TRUE,"The Hurricanes are a team for boys and girls, playing in the North Wilts Youth Football U14 Division 1 League",wyfc.hurricanes@gmail.com,Industrial Electronic Wiring Ltd,/images/sponsors/iew.png,"For over 40 years, IEW Ltd. has been a cornerstone of the contract electronics manufacturing industry. With a dedicated team of over 60 professionals, we provide exemplary service to companies specialising in complex machinery.
 We are driven by a dual commitment – delivering cost-effective solutions and ensuring every assembly is delivered to time and rigorously tested, guaranteeing peak quality and reliability.
 Welcome to IEW Ltd.
-Where Innovation Meets Commitment.",https://www.iew.co.uk/
-youth-football-mixed,2011,Tornadoes,Darren Harvey,Wednesday Evenings,The Ridgeway School,TRUE,"The Tornadoes a team for boys and girls, playing in the North Wilts Youth Football U14 Division 4 League",wyfc.tornadoes@gmail.com,,,,
-youth-football-mixed,2010,Silverbacks,Sean Millwaters,Thursday Evenings,The Ridgeway School,TRUE,"The Silverbacks are  a team for boys and girls, playing in the North Wilts Youth Football U15 Division 2 League",wyfc.silverbacks@gmail.com,,,,
+Where Innovation Meets Commitment.",https://www.iew.co.uk/,
+youth-football-mixed,2011,Tornadoes,Darren Harvey,Wednesday Evenings,The Ridgeway School,TRUE,"The Tornadoes a team for boys and girls, playing in the North Wilts Youth Football U14 Division 4 League",wyfc.tornadoes@gmail.com,,,,,
+youth-football-mixed,2010,Silverbacks,Sean Millwaters,Thursday Evenings,The Ridgeway School,TRUE,"The Silverbacks are  a team for boys and girls, playing in the North Wilts Youth Football U15 Division 2 League",wyfc.silverbacks@gmail.com,,,,,
 youth-football-mixed,2009,Broncos,Rob Zukovic,Wednesday Evenings,Maunsell Way,TRUE,"The Broncos are a team for boys and girls, playing in the North Wilts Youth Football U16 Division 3 League",wyfc.broncos@gmail.com,,,"Your independent family run Pet Shop. Founded in 2003 - we have 22 years of experience.
 Based in Wroughton, Swindon. Serving all surrounding villages: Marlborough, Calne, Chippenham, Stratton, Highworth, Faringdon, Lyneham, Lechlade, Wanborough....
 
@@ -38,11 +38,55 @@ One for Small Pets, Cage and Wild Bird, Wildlife and Reptile Foods and Accessori
 One for with a huge range of Foods and Accessories for Cats and Dogs, plus Poultry and Horse items too. We like to call this -  'BIGShed'.
 
 Find your usual pet products at every day great prices.
-We are also fully licensed to sell Frontline and some Veterinary medicines (including foods)",
+We are also fully licensed to sell Frontline and some Veterinary medicines (including foods)",,
 youth-football-mixed,2007,u18,Elliot Woodhead & Sean Mason,Tuesday Evenings,The Ridgeway School,TRUE,"The Under 18 is a team for young people, playing in the North Wilts Youth Football U17/18 Division 1 League",wroughtonyouthfc@gmail.com,Pet Shed,/images/sponsors/petshed.png,"Your independent family run Pet Shop. Founded in 2003 - we have 22 years of experience.
-Based in Wroughton, Swindon. Serving all surrounding villages: Marlborough, Calne, Chippenham, Stratton, Highworth, Faringdon, Lyneham, Lechlade, Wanborough.   We have 2 Separate stores on the same site:
+Based in Wroughton, Swindon. Serving all surrounding villages: Marlborough, Calne, Chippenham, Stratton, Highworth, Faringdon, Lyneham, Lechlade, Wanborough.   ?We have 2 Separate stores on the same site:
 One for Small Pets, Cage and Wild Bird, Wildlife and Reptile Foods and Accessories. We like to call this -  'littleShed'.
 One for with a huge range of Foods and Accessories for Cats and Dogs, plus Poultry and Horse items too. We like to call this -  'BIGShed'.
 
 Find your usual pet products at every day great prices.
-We are also fully licensed to sell Frontline and some Veterinary medicines (including foods)",https://www.petshedonline.co.uk/
+We are also fully licensed to sell Frontline and some Veterinary medicines (including foods)",https://www.petshedonline.co.uk/,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
