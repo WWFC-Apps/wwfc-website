@@ -104,9 +104,13 @@ export const teams = rawTeams.map((team: any) => {
     ...team,
     teamName,
     birthYear,
-    slug: birthYear
-      ? `${birthYear}-${slugify(teamName)}`
-      : slugify(teamName),
+ slug: slugify(teamName),
     recruiting: String(team.recruiting).toLowerCase() === "true",
+    gallery: team.gallery
+  ? team.gallery
+      .split("|")
+      .map((image: string) => image.trim())
+      .filter(Boolean)
+  : [],
   };
 });
