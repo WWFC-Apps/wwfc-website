@@ -6,6 +6,7 @@ const navItems = [
   { href: "/teams", label: "Teams" },
   { href: "/visiting-teams", label: "Visiting Teams" },
   { href: "/policies", label: "Policies" },
+  { href: "/about/sponsors", label: "Sponsors" },
   { href: "/contact", label: "Contact" },
 ];
 
