@@ -1,32 +1,89 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import PageShell from "../../components/PageShell.astro";
+
+const sponsors = [
+  {
+    name: "Sponsor Name",
+    logo: "/images/sponsors/example-logo.png",
+    website: "#",
+  },
+  {
+    name: "Sponsor Name",
+    logo: "/images/sponsors/example-logo.png",
+    website: "#",
+  },
+  {
+    name: "Sponsor Name",
+    logo: "/images/sponsors/example-logo.png",
+    website: "#",
+  },
+  {
+    name: "Sponsor Name",
+    logo: "/images/sponsors/example-logo.png",
+    website: "#",
+  },
+];
 ---
 
-<Layout title="Sponsors | Wroughton & Wichelstowe FC">
+<Layout
+  title="Sponsors | Wroughton & Wichelstowe FC"
+  description="Sponsors and community supporters of Wroughton & Wichelstowe FC."
+>
   <PageShell>
     <section class="py-24">
-      <div class="mx-auto max-w-4xl px-6">
-        <a href="/about" class="text-sm font-semibold text-blue-300 hover:text-blue-200">
+      <div class="mx-auto max-w-6xl px-6">
+
+        <a
+          href="/about"
+          class="text-sm font-semibold text-blue-300 hover:text-blue-200"
+        >
           ← Back to About
         </a>
 
-        <div class="mt-10">
+        <div class="mt-10 max-w-4xl">
           <p class="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-blue-300">
-            Club Sponsors
+            Community Support
           </p>
 
           <h1 class="text-5xl font-light tracking-tight sm:text-6xl">
-            Sponsors
+            Club Sponsors
           </h1>
 
-          <div class="mt-12 rounded-3xl border border-white/10 bg-white/5 p-10 text-center">
-            <p class="text-2xl font-light text-white">Coming Soon</p>
-            <p class="mt-4 text-slate-300">
-              Sponsor information and opportunities will be added here.
-            </p>
-          </div>
+          <p class="mt-6 text-lg leading-relaxed text-slate-300">
+            Wroughton & Wichelstowe FC is able to thrive thanks to the
+            dedication of volunteers, community supporters and sponsors.
+          </p>
+
+          <p class="mt-4 text-lg leading-relaxed text-slate-300">
+            WWFC is proud to be collaborating with the following local businesses
+            who help support grassroots football across our community.
+          </p>
         </div>
+
+        <div class="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {sponsors.map((sponsor) => (
+            <a
+              href={sponsor.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group flex min-h-[220px] flex-col items-center justify-center rounded-3xl border border-white/10 bg-white/5 p-8 text-center transition hover:border-blue-400/40 hover:bg-white/10"
+            >
+              <div class="flex h-28 items-center justify-center rounded-2xl bg-white/95 p-4">
+                <img
+                  src={sponsor.logo}
+                  alt={sponsor.name}
+                  class="max-h-20 w-auto object-contain"
+                />
+              </div>
+
+              <h2 class="mt-6 text-lg font-semibold text-white transition group-hover:text-blue-300">
+                {sponsor.name}
+              </h2>
+            </a>
+          ))}
+        </div>
+
       </div>
     </section>
   </PageShell>
