@@ -40,31 +40,34 @@ import PageShell from "../../components/PageShell.astro";
             {section.title}
           </h2>
 
-        {(
+     {(
+  section.slug === "adult-senior-football" ||
+  section.slug === "youth-football-mixed" ||
+  section.slug === "girls-football" ||
+  section.slug === "pan-disability-football" ||
   section.slug === "sessional-football" ||
-  section.slug === "tournament-football" ||
-  section.slug === "pan-disability-football"
+  section.slug === "tournament-football"
 ) && (
-           <div class="mt-5 mb-5 flex h-24 items-center justify-center"> 
-              <img
-               src={
-  section.slug === "sessional-football"
-    ? "/images/wcats.png"
-    : section.slug === "tournament-football"
-    ? "/images/trophy3.png"
-    : "/images/ability.png"
-}
-              alt={
-  section.slug === "sessional-football"
-    ? "FA Wildcats"
-    : section.slug === "tournament-football"
-    ? "Tournament Football"
-    : "Pan-Disability Football"
-}
-              class="h-20 w-auto object-contain"
-              />
-            </div>
-          )}
+  <div class="mt-5 mb-5 flex h-24 items-center justify-center">
+    <img
+      src={
+        section.slug === "adult-senior-football"
+          ? "/images/swindon.png"
+          : section.slug === "youth-football-mixed"
+          ? "/images/northwilts.png"
+          : section.slug === "girls-football"
+          ? "/images/northwilts.png"
+          : section.slug === "sessional-football"
+          ? "/images/wcats.png"
+          : section.slug === "tournament-football"
+          ? "/images/trophy3.png"
+          : "/images/ability.png"
+      }
+      alt={section.title}
+      class="h-20 w-auto object-contain"
+    />
+  </div>
+)}
 
           <p class="mt-4 text-sm leading-relaxed text-slate-300">
             {section.description}
