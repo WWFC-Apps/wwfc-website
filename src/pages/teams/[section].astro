@@ -50,10 +50,12 @@ const filteredTeams = teams.filter((team) => {
       {displayName}
     </h1>
 
-  <p class="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300">
+ <p class="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300">
   {
-    section === "sessional-football"
-      ? "Browse WWFC sessional football programmes and participation sessions."
+    section === "tournament-football"
+      ? "Summer tournaments, football festivals and special events hosted by WWFC will be published here."
+      : section === "sessional-football"
+      ? "Browse WWFC football sessions and development programmes."
       : `Browse WWFC ${displayName.toLowerCase()} teams and age groups.`
   }
 </p>
