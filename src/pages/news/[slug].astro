@@ -43,11 +43,9 @@ const { item } = Astro.props;
           />
         )}
 
-        <div class="mt-10 space-y-6 text-lg leading-relaxed text-slate-300">
-          {item.content.split("\\n").map((paragraph) => (
-            <p>{paragraph}</p>
-          ))}
-        </div>
+        <div class="mt-10 text-lg leading-relaxed text-slate-300 whitespace-pre-line">
+  {item.content}
+</div>
       </div>
     </article>
   </PageShell>
