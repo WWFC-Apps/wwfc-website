@@ -37,7 +37,7 @@ const { item } = Astro.props;
 
         {item.image && (
           <img
-            src={item.image}
+            src={item.articleImage || item.image}
             alt={item.title}
             class="mt-10 max-h-[420px] w-full rounded-3xl object-cover"
           />
