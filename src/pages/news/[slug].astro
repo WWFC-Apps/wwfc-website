@@ -1,0 +1,54 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import PageShell from "../../components/PageShell.astro";
+import { news } from "../../data/news";
+
+export function getStaticPaths() {
+  return news.map((item) => ({
+    params: { slug: item.slug },
+    props: { item },
+  }));
+}
+
+const { item } = Astro.props;
+---
+
+<Layout
+  title={`${item.title} | Wroughton & Wichelstowe FC`}
+  description={item.summary}
+>
+  <PageShell>
+    <article class="py-24">
+      <div class="mx-auto max-w-4xl px-6">
+        <a
+          href="/news"
+          class="text-sm font-semibold text-blue-300 hover:text-blue-200"
+        >
+          ← Back to News
+        </a>
+
+        <p class="mt-10 text-sm font-semibold text-blue-300">
+          {item.date}
+        </p>
+
+        <h1 class="mt-4 text-5xl font-light tracking-tight sm:text-6xl">
+          {item.title}
+        </h1>
+
+        {item.image && (
+          <img
+            src={item.image}
+            alt={item.title}
+            class="mt-10 max-h-[420px] w-full rounded-3xl object-cover"
+          />
+        )}
+
+        <div class="mt-10 space-y-6 text-lg leading-relaxed text-slate-300">
+          {item.content.split("\\n").map((paragraph) => (
+            <p>{paragraph}</p>
+          ))}
+        </div>
+      </div>
+    </article>
+  </PageShell>
+</Layout>
