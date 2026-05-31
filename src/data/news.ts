@@ -5,9 +5,11 @@ import { parse } from "csv-parse/sync";
 const csvPath = path.resolve("./src/data/news.csv");
 const fileContent = fs.readFileSync(csvPath);
 
-export const news = parse(fileContent, {
+const rawNews = parse(fileContent, {
   columns: true,
   skip_empty_lines: true,
-  delimiter: "\t",
   relax_quotes: true,
+  trim: true,
 });
+
+export const news = rawNews.filter((item: any) => item.slug);
