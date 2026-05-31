@@ -8,4 +8,6 @@ const fileContent = fs.readFileSync(csvPath);
 export const news = parse(fileContent, {
   columns: true,
   skip_empty_lines: true,
+  delimiter: "\t",
+  relax_quotes: true,
 });
