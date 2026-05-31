@@ -60,6 +60,7 @@ const filteredTeams = teams.filter((team) => {
   }
 </p>
   </div>
+<div class="flex items-center justify-center">
   {section === "sessional-football" && (
     <img
       src="/images/fa-wildcats.png"
@@ -67,6 +68,15 @@ const filteredTeams = teams.filter((team) => {
       class="h-48 w-auto rounded-2xl bg-white/90 p-3 shadow-lg shadow-black/20"
     />
   )}
+
+  {section === "pan-disability-football" && (
+    <img
+      src="/images/ability.png"
+      alt="Pan Disability Football"
+      class="h-48 w-auto rounded-2xl bg-white/90 p-3 shadow-lg shadow-black/20"
+    />
+  )}
+</div>
 </div>   
       <div class="mt-12 grid gap-6 md:grid-cols-2">
         {filteredTeams.map((team) => (
