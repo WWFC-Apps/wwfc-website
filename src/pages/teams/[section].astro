@@ -56,6 +56,8 @@ const filteredTeams = teams.filter((team) => {
       ? "Summer tournaments, football festivals and special events hosted by WWFC will be published here."
       : section === "sessional-football"
       ? "Browse WWFC football sessions and development programmes."
+      : section === "pan-disability-football"
+  ? "Inclusive football opportunities for players of all abilities."
       : `Browse WWFC ${displayName.toLowerCase()} teams and age groups.`
   }
 </p>
@@ -65,7 +67,7 @@ const filteredTeams = teams.filter((team) => {
     <img
       src="/images/fa-wildcats.png"
       alt="FA Wildcats"
-      class="h-48 w-auto rounded-2xl bg-white/90 p-3 shadow-lg shadow-black/20"
+      class="h-48 w-auto"
     />
   )}
 
@@ -73,7 +75,7 @@ const filteredTeams = teams.filter((team) => {
     <img
       src="/images/ability.png"
       alt="Pan Disability Football"
-      class="h-48 w-auto rounded-2xl bg-white/90 p-3 shadow-lg shadow-black/20"
+      class="h-48 w-auto"
     />
   )}
 </div>
