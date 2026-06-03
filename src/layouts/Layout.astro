@@ -1,8 +1,10 @@
 ---
+---
 import "../styles/global.css";
-
+import Analytics from "@vercel/analytics/astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+---
 
 const {
   title = "Wroughton & Wichelstowe FC",
@@ -20,6 +22,7 @@ const {
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
     <title>{title}</title>
+    <Analytics />
   </head>
 
   <body class="bg-[#04163a] font-[Manrope] text-white">
