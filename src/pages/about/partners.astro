@@ -1,17 +1,47 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import PageShell from "../../components/PageShell.astro";
+
+const partners = [
+  {
+    name: "Wroughton & Wichelstowe Parish Council",
+    logo: "/images/partners/parish.png",
+    description:
+      "Forming the first tier of local government, Wroughton & Wichelstowe Parish Council has 15 Parish Councillors. The council has four committees and several working parties who are responsible for various projects within the village. The Parish Council is responsible for the maintenance of the playing fields and facilities at Wroughton & Wichelstowe, which are used by WWFC for training and matches.",
+    website: "https://wroughton.gov.uk/",
+  },
+  {
+    name: "Vision 4 Wroughton",
+    logo: "/images/partners/v4w.jpg ",
+    description:
+      "Vision 4 Wroughton (V4W} was formed in 2004 to enable  the community of Wroughton, to produce a Community Strategic Action Plan for the Parish. V4W relies on volunteers to achieve its “Vision” of “a vibrant, flourishing, sustainable village with a high quality of life for all",
+    website: "https://www.facebook.com/groups/337205697550954/",
+  },
+  {
+    name: "Scott Media",
+    logo: "/images/partners/scott.png",
+    description:
+      "Scott Media is a local media production company specialising in photography, videography and digital content creation. Scott Media has supported WWFC with photography and video content for the club's website, social media channels and promotional materials.",
+    website: "https://www.scottmedia.uk/",
+  },
+];
 ---
 
-<Layout title="Partners | Wroughton & Wichelstowe FC">
+<Layout
+  title="Partners | Wroughton & Wichelstowe FC"
+  description="Community partners supporting Wroughton & Wichelstowe FC."
+>
   <PageShell>
     <section class="py-24">
-      <div class="mx-auto max-w-4xl px-6">
-        <a href="/about" class="text-sm font-semibold text-blue-300 hover:text-blue-200">
+      <div class="mx-auto max-w-6xl px-6">
+        <a
+          href="/about"
+          class="text-sm font-semibold text-blue-300 hover:text-blue-200"
+        >
           ← Back to About
         </a>
 
-        <div class="mt-10">
+        <div class="mt-10 max-w-4xl">
           <p class="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-blue-300">
             Community Partners
           </p>
@@ -20,12 +50,44 @@ import PageShell from "../../components/PageShell.astro";
             Partners
           </h1>
 
-          <div class="mt-12 rounded-3xl border border-white/10 bg-white/5 p-10 text-center">
-            <p class="text-2xl font-light text-white">Coming Soon</p>
-            <p class="mt-4 text-slate-300">
-              Details of WWFC’s community partners will be added here.
-            </p>
-          </div>
+          <p class="mt-6 text-lg leading-relaxed text-slate-300">
+            WWFC works with local organisations, community groups and football
+            partners who share our commitment to inclusive grassroots football,
+            youth development and positive community impact.
+          </p>
+        </div>
+
+        <div class="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {partners.map((partner) => (
+            <a
+              href={partner.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group flex min-h-[360px] flex-col justify-between rounded-3xl border border-white/10 bg-white/5 p-8 text-center transition hover:border-blue-400/40 hover:bg-white/10"
+            >
+              <div>
+                <div class="mx-auto flex h-32 max-w-xs items-center justify-center rounded-2xl bg-white/95 p-4">
+                  <img
+                    src={partner.logo}
+                    alt={partner.name}
+                    class="max-h-24 w-auto object-contain"
+                  />
+                </div>
+
+                <h2 class="mt-6 text-2xl font-semibold text-white transition group-hover:text-blue-300">
+                  {partner.name}
+                </h2>
+
+                <p class="mt-4 leading-relaxed text-slate-300">
+                  {partner.description}
+                </p>
+              </div>
+
+              <div class="mt-8 text-sm font-semibold text-blue-300">
+                Visit partner →
+              </div>
+            </a>
+          ))}
         </div>
       </div>
     </section>
