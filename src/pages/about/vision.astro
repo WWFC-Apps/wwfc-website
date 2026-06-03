@@ -1,16 +1,42 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import PageShell from "../../components/PageShell.astro";
+
+const values = [
+  {
+    title: "Inclusion",
+    text: "Football should be accessible to everyone, regardless of age, ability, background or experience.",
+  },
+  {
+    title: "Community",
+    text: "We are proud to be a community-focused club built on the commitment of volunteers, families and local supporters.",
+  },
+  {
+    title: "Development",
+    text: "We support players, coaches and volunteers in achieving their potential through learning, opportunity and positive experiences.",
+  },
+  {
+    title: "Wellbeing",
+    text: "We recognise that football can help young people build confidence, resilience and healthy ways of responding to success, disappointment and setbacks.",
+  },
+  {
+    title: "Respect",
+    text: "We promote respect for teammates, opponents, officials, volunteers and the wider community.",
+  },
+  {
+    title: "Enjoyment",
+    text: "Football should be fun, rewarding and memorable for everyone involved.",
+  },
+];
 ---
 
 <Layout
   title="Club Vision | Wroughton & Wichelstowe FC"
-  description="The future vision and strategic direction of Wroughton & Wichelstowe FC."
+  description="The vision, mission and values of Wroughton & Wichelstowe FC."
 >
   <PageShell>
     <section class="py-24">
-      <div class="mx-auto max-w-4xl px-6">
-
+      <div class="mx-auto max-w-6xl px-6">
         <a
           href="/about"
           class="text-sm font-semibold text-blue-300 hover:text-blue-200"
@@ -18,27 +44,95 @@ import PageShell from "../../components/PageShell.astro";
           ← Back to About
         </a>
 
-        <div class="mt-10">
+        <div class="mt-10 max-w-4xl">
           <p class="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-blue-300">
-            Future Development
+            Our Future
           </p>
 
           <h1 class="text-5xl font-light tracking-tight sm:text-6xl">
             Club Vision
           </h1>
 
-          <div class="mt-12 rounded-3xl border border-white/10 bg-white/5 p-10 text-center">
-            <p class="text-2xl font-light text-white">
-              Coming Soon
-            </p>
-
-            <p class="mt-4 text-slate-300">
-              We are currently preparing our long-term vision and development
-              plans for Wroughton & Wichelstowe FC.
-            </p>
-          </div>
-
+          <p class="mt-6 text-lg leading-relaxed text-slate-300">
+            Wroughton & Wichelstowe FC aims to be a welcoming, inclusive and
+            sustainable community football club that provides opportunities for
+            people of all ages and abilities to enjoy, develop and thrive
+            through football.
+          </p>
         </div>
+
+        <div class="mt-14 grid gap-6 lg:grid-cols-2">
+          <section class="rounded-3xl border border-white/10 bg-white/5 p-8">
+            <p class="text-sm font-semibold uppercase tracking-[0.25em] text-blue-300">
+              Our Mission
+            </p>
+
+            <h2 class="mt-4 text-3xl font-light tracking-tight text-white">
+              Football for our community, from first kick to lifelong player.
+            </h2>
+
+            <p class="mt-6 leading-relaxed text-slate-300">
+              WWFC exists to provide safe, affordable and accessible football
+              opportunities for our local community.
+            </p>
+
+            <p class="mt-4 leading-relaxed text-slate-300">
+              Through dedicated volunteers, qualified coaches and strong
+              community partnerships, we aim to support participation,
+              development, inclusion and enjoyment across youth, girls, adult,
+              disability and recreational football.
+            </p>
+          </section>
+
+          <section class="rounded-3xl border border-blue-400/20 bg-blue-500/10 p-8">
+            <p class="text-sm font-semibold uppercase tracking-[0.25em] text-blue-300">
+              Wellbeing & Life Skills
+            </p>
+
+            <h2 class="mt-4 text-3xl font-light tracking-tight text-white">
+              Helping young people grow on and off the pitch.
+            </h2>
+
+            <p class="mt-6 leading-relaxed text-slate-300">
+              We recognise the important role sport can play in supporting the
+              mental wellbeing of children and young people.
+            </p>
+
+            <p class="mt-4 leading-relaxed text-slate-300">
+              Through football, players learn to build confidence, manage
+              emotions, respond to setbacks, show empathy towards teammates and
+              opponents, and develop resilience, communication and teamwork.
+            </p>
+          </section>
+        </div>
+
+        <section class="mt-16">
+          <p class="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-blue-300">
+            Our Values
+          </p>
+
+          <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {values.map((value) => (
+              <article class="rounded-3xl border border-white/10 bg-white/5 p-8">
+                <h3 class="text-2xl font-semibold text-white">
+                  {value.title}
+                </h3>
+
+                <p class="mt-4 leading-relaxed text-slate-300">
+                  {value.text}
+                </p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section class="mt-16 rounded-3xl border border-white/10 bg-white/5 p-8 text-center">
+          <p class="text-2xl font-light leading-relaxed text-white">
+            At WWFC, success is measured not only by results on the pitch, but
+            by the positive impact we have on players, families, volunteers and
+            the wider community.
+          </p>
+        </section>
       </div>
     </section>
   </PageShell>
