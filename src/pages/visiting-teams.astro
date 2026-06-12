@@ -95,21 +95,26 @@ const venues = [
                   {venue.description}
                 </p>
 
-                <div class="mt-6 grid gap-3 text-sm text-slate-300">
-                  <p>
-                    <span class="font-semibold text-white">Parking:</span> Details to be confirmed.
-                  </p>
-                  <p>
-                    <span class="font-semibold text-white">Toilets:</span> Details to be confirmed.
-                  </p>
-                  <p>
-                    <span class="font-semibold text-white">Dogs:</span> Details to be confirmed.
-                  </p>
-                </div>
+              <div class="mt-6 grid gap-3 text-sm text-slate-300">
+  <p>
+    <span class="font-semibold text-white">Parking:</span>{" "}
+    {venue.parking ?? "Details to be confirmed."}
+  </p>
+
+  <p>
+    <span class="font-semibold text-white">Toilets:</span>{" "}
+    {venue.toilets ?? "Details to be confirmed."}
+  </p>
+
+  <p>
+    <span class="font-semibold text-white">Dogs:</span>{" "}
+    {venue.dogs ?? "Details to be confirmed."}
+  </p>
+</div>
 
                 <div class="mt-8">
                   <a
-                    href="#"
+                    href={venue.mapUrl ?? "#"}
                     class="inline-flex rounded-full border border-white/20 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
                   >
                     View map
