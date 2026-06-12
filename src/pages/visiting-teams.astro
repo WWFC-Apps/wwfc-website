@@ -8,7 +8,13 @@ const venues = [
     image: "/images/venues/weir-field.webp",
     description:
       "Matchday information for teams visiting The Weir Field, including parking, pitch access and facilities.",
-    parking:
+     address:
+    "The Weir Field, 12A Devizes Rd, Wroughton, Swindon SN4 0SA",
+
+      what3words:
+    "///castle.quite.along",
+
+      parking:
       "There is a small car park at the location which is shared with the Working Mens club, if this becomes full there is a large number of spaces a 2 min walk away at the Ellendune Centre.",
 
     toilets:
@@ -92,7 +98,7 @@ const venues = [
       parking: "Please park on larger housing estates nearby and be considerate of the residents, ensuring no obstructions.",
       toilets: "Unfortunately, there are no toilet facilities available at the location.",
       mapurl: "https://www.google.com/maps/place/51%C2%B032'03.8%22N+1%C2%B047'12.6%22W/@51.534397,-1.786834,17z/data=!3m1!4b1!4m4!3m3!8m2!3d51.534397!4d-1.786834?entry=ttu&g_ep=EgoyMDI2MDYwOS4wIKXMDSoASAFQAw%3D%3D",
-      
+
   },
 ];
 ---
@@ -138,7 +144,18 @@ const venues = [
                   {venue.description}
                 </p>
 
-              <div class="mt-6 grid gap-3 text-sm text-slate-300">
+     <div class="mt-6 grid gap-3 text-sm text-slate-300">
+
+  <p>
+    <span class="font-semibold text-white">Address:</span>{" "}
+    {venue.address ?? "Details to be confirmed."}
+  </p>
+
+  <p>
+    <span class="font-semibold text-white">what3words:</span>{" "}
+    {venue.what3words ?? "Details to be confirmed."}
+  </p>
+
   <p>
     <span class="font-semibold text-white">Parking:</span>{" "}
     {venue.parking ?? "Details to be confirmed."}
@@ -153,6 +170,7 @@ const venues = [
     <span class="font-semibold text-white">Dogs:</span>{" "}
     {venue.dogs ?? "Details to be confirmed."}
   </p>
+
 </div>
 
                 <div class="mt-8">
