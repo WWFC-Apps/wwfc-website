@@ -175,11 +175,22 @@ const venues = [
     {venue.address ?? "Details to be confirmed."}
   </p>
 
-  <p>
-    <span class="font-semibold text-white">what3words:</span>{" "}
-    {venue.what3words ?? "Details to be confirmed."}
-  </p>
+<p>
+  <span class="font-semibold text-white">what3words:</span>{" "}
 
+  {venue.what3words ? (
+    <a
+      href={`https://what3words.com/${venue.what3words.replace("///", "")}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="text-blue-300 hover:text-blue-200"
+    >
+      {venue.what3words}
+    </a>
+  ) : (
+    "Details to be confirmed."
+  )}
+</p>
   <p>
     <span class="font-semibold text-white">Parking:</span>{" "}
     {venue.parking ?? "Details to be confirmed."}
