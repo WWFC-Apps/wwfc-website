@@ -2,26 +2,56 @@
 import Layout from "../../layouts/Layout.astro";
 import PageShell from "../../components/PageShell.astro";
 
+const schools = [
+  {
+    name: "Lift East Wichel Primary School",
+    type: "Primary School",
+    logo: "/images/partners/schools/wichel.png",
+    website: "https://www.lifteastwichel.org/",
+    active: true,
+  },
+  {
+    name: "Primary School Partner",
+    type: "Primary School",
+    active: false,
+  },
+  {
+    name: "Primary School Partner",
+    type: "Primary School",
+    active: false,
+  },
+  {
+    name: "Secondary School Partner",
+    type: "Secondary School",
+    active: false,
+  },
+  {
+    name: "Secondary School Partner",
+    type: "Secondary School",
+    active: false,
+  },
+];
+
 const partners = [
   {
     name: "Wroughton & Wichelstowe Parish Council",
     logo: "/images/partners/parish.png",
     description:
-      "Forming the first tier of local government, Wroughton & Wichelstowe Parish Council has 15 Parish Councillors. The council has four committees and several working parties who are responsible for various projects within the village. The Parish Council is responsible for the maintenance of the playing fields and facilities at Wroughton & Wichelstowe, which are used by WWFC for training and matches.",
+      "Forming the first tier of local government, Wroughton & Wichelstowe Parish Council has 15 Parish Councillors. The council has four committees and several working parties responsible for projects throughout the parish. The Parish Council is also responsible for the maintenance of playing fields and facilities used by WWFC for training and matches.",
     website: "https://wroughton.gov.uk/",
   },
   {
     name: "Vision 4 Wroughton",
-    logo: "/images/partners/v4w.jpg ",
+    logo: "/images/partners/v4w.jpg",
     description:
-      "Vision 4 Wroughton (V4W} was formed in 2004 to enable  the community of Wroughton, to produce a Community Strategic Action Plan for the Parish. V4W relies on volunteers to achieve its “Vision” of “a vibrant, flourishing, sustainable village with a high quality of life for all",
+      "Vision 4 Wroughton was formed in 2004 to enable the community of Wroughton to produce a Community Strategic Action Plan for the parish. V4W relies on volunteers to achieve its vision of a vibrant, flourishing and sustainable village with a high quality of life for all.",
     website: "https://www.facebook.com/groups/337205697550954/",
   },
   {
     name: "Scott Media",
     logo: "/images/partners/scott.jpg",
     description:
-      "Scott Media is a UK-based public relations and media consultancy that helps small to medium-sized enterprises (SMEs), charities, and entrepreneurs raise their profiles. Run by veteran journalist Fiona Scott, the company acts as an external press office, offering services from securing media coverage to creating corporate videos and training spokespeople. Scott Media's mission is to help clients share their stories and connect with their audiences effectively.",
+      "Scott Media is a UK-based public relations and media consultancy that helps small to medium-sized enterprises, charities and entrepreneurs raise their profiles. Run by veteran journalist Fiona Scott, the company acts as an external press office, helping clients share their stories and connect effectively with their audiences.",
     website: "https://www.scottmedia.uk/",
   },
 ];
@@ -29,7 +59,7 @@ const partners = [
 
 <Layout
   title="Partners | Wroughton & Wichelstowe FC"
-  description="Community partners supporting Wroughton & Wichelstowe FC."
+  description="School and community partners supporting Wroughton & Wichelstowe FC."
 >
   <PageShell>
     <section class="py-24">
@@ -42,8 +72,10 @@ const partners = [
         </a>
 
         <div class="mt-10 max-w-4xl">
-          <p class="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-blue-300">
-            Community Partners
+          <p
+            class="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-blue-300"
+          >
+            Working Together
           </p>
 
           <h1 class="text-5xl font-light tracking-tight sm:text-6xl">
@@ -51,43 +83,179 @@ const partners = [
           </h1>
 
           <p class="mt-6 text-lg leading-relaxed text-slate-300">
-            WWFC works with local organisations, community groups and football
-            partners who share our commitment to inclusive grassroots football,
-            youth development and positive community impact.
+            Wroughton & Wichelstowe FC is proud to work alongside schools,
+            community organisations and local partners who share our commitment
+            to developing opportunities for young people and strengthening our
+            local community through grassroots football.
           </p>
         </div>
 
-        <div class="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {partners.map((partner) => (
-            <a
-              href={partner.website}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="group flex min-h-[360px] flex-col justify-between rounded-3xl border border-white/10 bg-white/5 p-8 text-center transition hover:border-blue-400/40 hover:bg-white/10"
+        <div class="mt-20">
+          <div class="mx-auto max-w-4xl text-center">
+            <p
+              class="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-blue-300"
             >
-              <div>
-                <div class="mx-auto flex h-32 max-w-xs items-center justify-center rounded-2xl bg-white/95 p-4">
-                  <img
-                    src={partner.logo}
-                    alt={partner.name}
-                    class="max-h-24 w-auto object-contain"
-                  />
-                </div>
+              Education Partners
+            </p>
 
-                <h2 class="mt-6 text-2xl font-semibold text-white transition group-hover:text-blue-300">
-                  {partner.name}
-                </h2>
+            <h2 class="text-4xl font-light tracking-tight sm:text-5xl">
+              Our School Partners
+            </h2>
 
-                <p class="mt-4 leading-relaxed text-slate-300">
-                  {partner.description}
-                </p>
-              </div>
+            <p class="mt-6 text-lg leading-relaxed text-slate-300">
+              WWFC is proud to build strong relationships with schools across
+              Wroughton and Wichelstowe. By working together, we can create more
+              opportunities for young people to enjoy football, stay active and
+              become part of their local community.
+            </p>
+          </div>
 
-              <div class="mt-8 text-sm font-semibold text-blue-300">
-                Visit partner →
-              </div>
+          <div class="mt-14 grid gap-6 sm:grid-cols-2 xl:grid-cols-5">
+            {
+              schools.map((school) =>
+                school.active ? (
+                  <a
+                    href={school.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="group flex min-h-[280px] flex-col rounded-3xl border border-white/10 bg-white/5 p-6 text-center transition hover:border-blue-400/40 hover:bg-white/10"
+                  >
+                    <div class="flex h-32 items-center justify-center rounded-2xl bg-white/95 p-4">
+                      <img
+                        src={school.logo}
+                        alt={`${school.name} logo`}
+                        class="max-h-24 max-w-full object-contain"
+                      />
+                    </div>
+
+                    <div class="flex flex-1 flex-col">
+                      <h3 class="mt-6 text-xl font-semibold text-white transition group-hover:text-blue-300">
+                        {school.name}
+                      </h3>
+
+                      <p class="mt-2 text-sm text-slate-400">
+                        {school.type}
+                      </p>
+
+                      <div class="mt-auto pt-6 text-sm font-semibold text-blue-300">
+                        Visit school →
+                      </div>
+                    </div>
+                  </a>
+                ) : (
+                  <div class="flex min-h-[280px] flex-col rounded-3xl border border-dashed border-white/15 bg-white/[0.03] p-6 text-center">
+                    <div class="flex h-32 items-center justify-center rounded-2xl bg-white/5">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        class="h-14 w-14 text-slate-500"
+                        aria-hidden="true"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M3.75 21h16.5M4.5 21V9.75L12 3l7.5 6.75V21M9 21v-6h6v6M7.5 10.5h.008v.008H7.5V10.5Zm4.5 0h.008v.008H12V10.5Zm4.5 0h.008v.008H16.5V10.5Z"
+                        />
+                      </svg>
+                    </div>
+
+                    <div class="flex flex-1 flex-col">
+                      <h3 class="mt-6 text-xl font-semibold text-slate-300">
+                        {school.name}
+                      </h3>
+
+                      <p class="mt-2 text-sm text-slate-500">
+                        {school.type}
+                      </p>
+
+                      <div class="mt-auto pt-6">
+                        <span class="inline-flex rounded-full border border-blue-400/20 bg-blue-400/10 px-3 py-1 text-xs font-semibold text-blue-300">
+                          Partnership in development
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                )
+              )
+            }
+          </div>
+
+          <div class="mt-14 rounded-3xl border border-blue-400/20 bg-blue-400/10 px-8 py-10 text-center">
+            <h3 class="text-2xl font-semibold text-white">
+              Working with a local school?
+            </h3>
+
+            <p class="mx-auto mt-4 max-w-2xl leading-relaxed text-slate-300">
+              We welcome opportunities to work with schools through coaching,
+              football activities, community events and programmes that
+              encourage young people to become more active.
+            </p>
+
+            <a
+              href="/about/contact"
+              class="mt-6 inline-flex rounded-full bg-blue-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-400"
+            >
+              Contact the club
             </a>
-          ))}
+          </div>
+        </div>
+
+        <div class="mt-28 border-t border-white/10 pt-20">
+          <div class="max-w-4xl">
+            <p
+              class="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-blue-300"
+            >
+              Community Partners
+            </p>
+
+            <h2 class="text-4xl font-light tracking-tight sm:text-5xl">
+              Supporting Our Community
+            </h2>
+
+            <p class="mt-6 text-lg leading-relaxed text-slate-300">
+              Alongside our education partners, WWFC works with local
+              organisations and community groups that share our commitment to
+              inclusive grassroots football, youth development and positive
+              community impact.
+            </p>
+          </div>
+
+          <div class="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {
+              partners.map((partner) => (
+                <a
+                  href={partner.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="group flex min-h-[360px] flex-col justify-between rounded-3xl border border-white/10 bg-white/5 p-8 text-center transition hover:border-blue-400/40 hover:bg-white/10"
+                >
+                  <div>
+                    <div class="mx-auto flex h-32 max-w-xs items-center justify-center rounded-2xl bg-white/95 p-4">
+                      <img
+                        src={partner.logo}
+                        alt={`${partner.name} logo`}
+                        class="max-h-24 w-auto object-contain"
+                      />
+                    </div>
+
+                    <h3 class="mt-6 text-2xl font-semibold text-white transition group-hover:text-blue-300">
+                      {partner.name}
+                    </h3>
+
+                    <p class="mt-4 leading-relaxed text-slate-300">
+                      {partner.description}
+                    </p>
+                  </div>
+
+                  <div class="mt-8 text-sm font-semibold text-blue-300">
+                    Visit partner →
+                  </div>
+                </a>
+              ))
+            }
+          </div>
         </div>
       </div>
     </section>
