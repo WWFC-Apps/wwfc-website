@@ -211,14 +211,16 @@ const venues = [
 
 </div>
 
-                <div class="mt-8">
-                  <a
-                    href={venue.mapUrl ?? "#"}
-                    class="inline-flex rounded-full border border-white/20 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
-                  >
-                    View map
-                  </a>
-                </div>
+               <div class="mt-8">
+  <a
+    href={venue.mapUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="inline-flex rounded-full border border-white/20 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+  >
+    View map
+  </a>
+</div>
               </div>
             </article>
           ))}
